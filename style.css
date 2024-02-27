@@ -1,0 +1,155 @@
+header {
+  background-color: #346884;
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  color: #fff;
+  font-family: "Font Awesome", sans-serif;
+  background-color: #252b3c;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.league-header img {
+  width: 200px;
+}
+
+.live-menu-container ul a {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabs-container {
+  text-align: center;
+}
+
+.range-container {
+  text-align: center;
+}
+.range-container input {
+  width: 100%;
+}
+.range-container .range-numbers {
+  color: #fff;
+  font-size: 12px;
+}
+
+.match {
+  display: flex;
+  justify-content: space-between;
+}
+
+.market-name {
+  text-align: center;
+}
+
+.time-score-infos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-container {
+  display: flex;
+  width: 65%;
+}
+
+.left-container {
+  width: 50%;
+}
+
+.today-events-header {
+  background-color: #333a53;
+  color: #97999d;
+}
+
+.today-events-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.upcoming-events-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upcoming-tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab i.fa-solid {
+  color: white;
+}
+
+.upcoming-fixture-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upcoming-fixture-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.casino-games-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.img-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bet-slip-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bet-slip-tabs {
+  display: flex;
+  justify-content: space-around;
+}
+
+.coupon-amount input {
+  width: 100%;
+}
+
+.coupon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-coupon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-rate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-button-main button {
+  width: 100%;
+}
+
+.fast-btns {
+  display: flex;
+}
+
+.numbers-cont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}/*# sourceMappingURL=style.css.map */
