@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testcase</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <script src="js/script.js" defer></script>
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/flag.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <!-- Menu Overlay -->
+  <div id="overlay"></div>
+
+  <!-- Header::Begin -->
+  <header>
+    <button onclick="openLeftSidebar()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo">
+    </div>
+    <button onclick="openRightSidebar()">
+      <i class="fa-solid fa-user"></i>
+    </button>
+  </header>
+  <!-- Header::End -->
+
+  <!-- Content::Begin -->
+  <section class="content">
+    <!-- Left Sidebar::Begin -->
+    <aside id="leftSidebar" class="left-sidebar">
+
+      <a href="javascript:void(0)" class="closebtn" onclick="closeLeftSidebar()">
+        <i class="fa-solid fa-xmark"></i>
+      </a>
+
+      <div class="tabs-container">
+        <button class="tab-item sport active">Sport List</button>
+        <button class="tab-item live">Live</button>
+      </div>
+
+      <div class="range-container">
+        <input type="range" step="1" min="0" max="7">
+        <div class="range-numbers">
+          <span class="range-number">All</span>
+          <span class="range-number">1</span>
+          <span class="range-number">2</span>
+          <span class="range-number">4</span>
+          <span class="range-number">6</span>
+          <span class="range-number">12</span>
+          <span class="range-number">24</span>
+          <span class="range-number">48</span>
+        </div>
+      </div>
+
+      <div class="live-menu-container">
+        <ul class="m1-list">
+          <li class="m1-item active">
+            <a href="#" class="m1-link">
+              <div class="m1-link-left">
+                <i class="fa-regular fa-Football"></i>
+                <span class="text">Football</span>
+              </div>
+              <div class="m1-link-right">
+                <span class="count">2</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+              </div>
+            </a>
+            <ul class="m2-list">
+              <li class="m2-item active">
+                <a href="#" class="m2-link">
+                  <div class="m2-link-left">
+                    <i class="country icon-32xTUR"></i>
+                    <span class="text">Turkey</span>
+                  </div>
+                  <div class="m2-link-right">
+                    <span class="count">2</span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                  </div>
+                </a>
+                <ul class="m3-list">
+                  <li class="m3-item">
+                    <div class="match-infos">
+                        <div class="match">
+                          <div class="team-infos">
+                            <span>Galatasaray</span>
+                            <span>Fenerbahçe</span>
+                          </div>
+                          <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="time-score-infos">
+                          <span class="time">2. Devre 71:51</span>
+                          <span class="score">2:1</span>
+                        </div>
+                        <div class="market-name">
+                          1x2
+                        </div>
+                        <div class="bet-btn-group">
+                          <button class="bet-btn rate-down-small active">
+                            <span class="rate">1.34</span>
+                            <span>Galatasaray</span>
+                          </button> 
+                          <button class="bet-btn rate-up-small">
+                            <span class="rate">4.03</span>
+                            <span>X</span>
+                          </button>
+                          <button class="bet-btn rate-up-small">
+                            <span class="rate">13.66</span>
+                            <span>Fenerbahçe</span>
+                          </button>
+                        </div>
+                    </div>
+                  </li>
+                  <li class="m3-item">
+                    <div class="match-infos">
+                        <div class="match">
+                          <div class="team-infos">
+                            <span>Beşiktaş</span>
+                            <span>Trabzonspor</span>
+                          </div>
+                          <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="time-score-infos">
+                          <span class="time">2. Devre 71:51</span>
+                          <span class="score">3:1</span>
+                        </div>
+                        <div class="market-name">
+                          1x2
+                        </div>
+                        <div class="bet-btn-group">
+                          <button class="bet-btn rate-down-small">
+                            <span class="rate">1.34</span>
+                            <span>Beşiktaş</span>
+                          </button> 
+                          <button class="bet-btn rate-up-small">
+                            <span class="rate">4.03</span>
+                            <span>X</span>
+                          </button>
+                          <button class="bet-btn rate-up-small">
+                            <span class="rate">13.66</span>
+                            <span>Trabzonspor</span>
+                          </button>
+                        </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="m2-item">
+                <a href="#" class="m2-link">
+                  <div class="m2-link-left">
+                    <i class="country icon-32xITA"></i>
+                    <span class="text">Italy</span>
+                  </div>
+                  <div class="m2-link-right">
+                    <span class="count">1</span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                  </div>
+                </a>
+                <ul class="m3-list">
+                  <li class="m3-item">
+                    <div class="match-infos">
+                        <div class="match">
+                          <div class="team-infos">
+                            <span>Milan</span>
+                            <span>Juventus</span>
+                          </div>
+                          <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="time-score-infos">
+                          <span class="time">2. Devre 71:51</span>
+                          <span class="score">1:1</span>
+                        </div>
+                        <div class="market-name">
+                          1x2
+                        </div>
+                        <div class="bet-btn-group">
+                          <button class="bet-btn rate-up-small">
+                            <span class="rate">4.34</span>
+                            <span>Milan</span>
+                          </button> 
+                          <button class="bet-btn rate-down-small">
+                            <span class="rate">1.70</span>
+                            <span>X</span>
+                          </button>
+                          <button class="bet-btn rate-up-small">
+                            <span class="rate">3.66</span>
+                            <span>Juventus</span>
+                          </button>
+                        </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="m1-item">
+            <a href="#" class="m1-link">
+              <div class="m1-link-left">
+                <i class="icon fa-solid fa-basketball"></i>
+                <span class="text">Basketball</span>
+              </div>
+              <div class="m1-link-right">
+                <span class="count">1</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+              </div>
+            </a>
+            <ul class="m2-list">
+              <li class="m2-item">
+                <a href="#" class="m2-link">
+                  <div class="m2-link-left">
+                    <i class="country icon-32xTUR"></i>
+                    <span class="text">Turkey</span>
+                  </div>
+                  <div class="m2-link-right">
+                    <span class="count">1</span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                  </div>
+                </a>
+                <ul class="m3-list">
+                  <li class="m3-item">
+                    <div class="match-infos">
+                        <div class="match">
+                          <div class="team-infos">
+                            <span>Galatasaray</span>
+                            <span>Fenerbahçe</span>
+                          </div>
+                          <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="time-score-infos">
+                          <span class="time">3rd Quarter 3:52"</span>
+                          <span class="score">59:47</span>
+                        </div>
+                        <div class="market-name">
+                          1x2
+                        </div>
+                        <div class="bet-btn-group">
+                          <button class="bet-btn rate-down-small">
+                            <span class="rate">1.34</span>
+                            <span>Galatasaray</span>
+                          </button>
+                          <button class="bet-btn rate-up-small">
+                            <span class="rate">13.66</span>
+                            <span>Fenerbahçe</span>
+                          </button>
+                        </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="m1-item">
+            <a href="#" class="m1-link">
+              <div class="m1-link-left">
+                <i class="icon fa-solid fa-volleyball"></i>
+                <span class="text">Volleyball</span>
+              </div>
+              <div class="m1-link-right">
+                <span class="count">1</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+              </div>
+            </a>
+            <ul class="m2-list">
+              <li class="m2-item">
+                <a href="#" class="m2-link">
+                  <div class="m2-link-left">
+                    <i class="country icon-32xTUR"></i>
+                    <span class="text">Turkey</span>
+                  </div>
+                  <div class="m2-link-right">
+                    <span class="count">1</span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                  </div>
+                </a>
+                <ul class="m3-list">
+                  <li class="m3-item">
+                    <div class="match-infos">
+                        <div class="match">
+                          <div class="team-infos">
+                            <span>Galatasaray</span>
+                            <span>Fenerbahçe</span>
+                          </div>
+                          <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="time-score-infos">
+                          <span class="time">3rd Set 3:52"</span>
+                          <span class="score">0:0</span>
+                        </div>
+                        <div class="market-name">
+                          Winner Match
+                        </div>
+                        <div class="bet-btn-group">
+                          <button class="bet-btn">
+                            <span class="rate">1.13</span>
+                            <span>Galatasaray</span>
+                          </button>
+                          <button class="bet-btn">
+                            <span class="rate">4.69</span>
+                            <span>Fenerbahçe</span>
+                          </button>
+                        </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <!-- Left Sidebar::End -->
+
+    <!-- Main Container::Begin -->
+    <main class="main-container" style="border:3px solid green">
+      <section class="left-container">
+        <section class="today-events">
+          <div class="today-events-header">Today's Events</div>
+          <div class="today-events-content">
+            <div class="event-item active">
+              <i class="icon fa-regular fa-futbol"></i>
+              <span class="type">Football</span>
+              <span class="count">59</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-solid fa-basketball"></i>
+              <span class="type">Basketball</span>
+              <span class="count">5</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-solid fa-volleyball"></i>
+              <span class="type">Volleyball</span>
+              <span class="count">2</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-regular fa-futbol"></i>
+              <span class="type">Tennis</span>
+              <span class="count">1</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-solid fa-basketball"></i>
+              <span class="type">Badminton</span>
+              <span class="count">1</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-solid fa-volleyball"></i>
+              <span class="type">E-Football</span>
+              <span class="count">1</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-regular fa-futbol"></i>
+              <span class="type">Ice Hokey</span>
+              <span class="count">1</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-solid fa-basketball"></i>
+              <span class="type">Handball</span>
+              <span class="count">1</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-regular fa-futbol"></i>
+              <span class="type">Football</span>
+              <span class="count">59</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-solid fa-basketball"></i>
+              <span class="type">Basketball</span>
+              <span class="count">5</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-solid fa-volleyball"></i>
+              <span class="type">Volleyball</span>
+              <span class="count">2</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-regular fa-futbol"></i>
+              <span class="type">Tennis</span>
+              <span class="count">1</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-solid fa-basketball"></i>
+              <span class="type">Badminton</span>
+              <span class="count">1</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-solid fa-volleyball"></i>
+              <span class="type">E-Football</span>
+              <span class="count">1</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-regular fa-futbol"></i>
+              <span class="type">Ice Hokey</span>
+              <span class="count">1</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-solid fa-basketball"></i>
+              <span class="type">Handball</span>
+              <span class="count">1</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-regular fa-futbol"></i>
+              <span class="type">Football</span>
+              <span class="count">59</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-solid fa-basketball"></i>
+              <span class="type">Basketball</span>
+              <span class="count">5</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-solid fa-volleyball"></i>
+              <span class="type">Volleyball</span>
+              <span class="count">2</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-regular fa-futbol"></i>
+              <span class="type">Tennis</span>
+              <span class="count">1</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-solid fa-basketball"></i>
+              <span class="type">Badminton</span>
+              <span class="count">1</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-solid fa-volleyball"></i>
+              <span class="type">E-Football</span>
+              <span class="count">1</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-regular fa-futbol"></i>
+              <span class="type">Ice Hokey</span>
+              <span class="count">1</span>
+            </div>
+            <div class="event-item">
+              <i class="icon fa-solid fa-basketball"></i>
+              <span class="type">Handball</span>
+              <span class="count">1</span>
+            </div>
+          </div>
+        </section>
+        <section class="upcoming-events">
+          <div class="upcoming-events-header">
+            <span>Upcoming Events</span>
+            <ul class="upcoming-tabs">
+                <li class="tab">
+                  <a href="#" class="active">
+                    <i class="fa-solid fa-futbol"></i>
+                    <span class="tab-text">Football</span>
+                  </a>
+                </li>
+                <li class="tab">
+                  <a href="#">
+                    <i class="fa-solid fa-basketball"></i>
+                    <span class="tab-text">Basketball</span>
+                  </a>
+                </li>
+                <li class="tab">
+                  <a href="#">
+                    <i class="icon fa-solid fa-volleyball"></i>
+                    <span class="tab-text">Volleyball</span>
+                  </a>
+                </li>
+                <li class="tab">
+                  <a href="#">
+                    <i class="fa-solid fa-football"></i>
+                    <span class="tab-text">American Football</span>
+                  </a>
+                </li>
+                <li class="tab">
+                  <a href="#">
+                    <i class="fa-solid fa-baseball-bat-ball"></i>
+                    <span class="tab-text">Baseball</span>
+                  </a>
+                </li>
+                 <li class="tab">
+                  <a href="#">
+                    <i class="fa-solid fa-hockey-puck"></i>
+                    <span class="tab-text">Hockey</span>
+                  </a>
+                </li>
+            </ul>
+            </div>
+          <div class="upcoming-events-content">
+            <div class="upcoming-fixture">
+              <div class="upcoming-fixture-header">
+                <div class="item">Hour</div>
+                <div class="item">Match</div>
+                <div class="item"></div>
+                <div class="item">1x2</div>
+                <div class="item">Total Goals</div>
+                <div class="item"></div>
+                <div class="item">Other</div>
+              </div>
+              <div class="upcoming-fixture-body">
+                <div class="item">
+                  <div class="time">11:00</div>
+                  <div class="date">18/09</div>
+                </div>
+                <div class="item">
+                  <div class="team-home">
+                    <i class="fa-regular fa-star"></i>
+                    <span>YSCC Yokohama</span>
+                  </div>
+                  <div class="team-away">
+                    <i class="fa-regular fa-star"></i>
+                    <span>Grulla Morioka</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="live">L</div>
+                </div>
+                <div class="item">
+                  <button class="bet-btn">
+                    <span class="rate">2.98</span>
+                    <span>1</span>
+                  </button> 
+                  <button class="bet-btn active">
+                    <span class="rate">3.43</span>
+                    <span>X</span>
+                  </button>
+                  <button class="bet-btn">
+                    <span class="rate">2.49</span>
+                    <span>2</span>
+                  </button>
+                </div>
+                <div class="item">
+                  <button class="bet-btn">
+                    <span class="rate">1.88</span>
+                    <span>Under 2.5</span>
+                  </button> 
+                  <button class="bet-btn">
+                    <span class="rate">2.01</span>
+                    <span>Over 2.5</span>
+                  </button>
+                </div>
+                <div class="item">
+                  <i class="fa-solid fa-chart-simple" style="color:white"></i>
+                </div>
+                <div class="item">
+                  <button class="bet-btn">
+                    +665
+                  </button>
+                </div>
+              </div>
+              <div class="upcoming-fixture-body">
+                <div class="item">
+                  <div class="time">11:00</div>
+                  <div class="date">18/09</div>
+                </div>
+                <div class="item">
+                  <div class="team-home">
+                    <i class="fa-regular fa-star"></i>
+                    <span>Granada CF SRL</span>
+                  </div>
+                  <div class="team-away">
+                    <i class="fa-regular fa-star"></i>
+                    <span>Girona FC SRL</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="live">L</div>
+                </div>
+                <div class="item">
+                  <button class="bet-btn">
+                    <span class="rate">2.80</span>
+                    <span>1</span>
+                  </button> 
+                  <button class="bet-btn">
+                    <span class="rate">3.50</span>
+                    <span>X</span>
+                  </button>
+                  <button class="bet-btn">
+                    <span class="rate">2.58</span>
+                    <span>2</span>
+                  </button>
+                </div>
+                <div class="item">
+                  <button class="bet-btn">
+                    <span class="rate">1.88</span>
+                    <span>Under 2.5</span>
+                  </button>
+                </div>
+                <div class="item">
+                  <i class="fa-solid fa-chart-simple"></i>
+                </div>
+                <div class="item">
+                  <button class="bet-btn">
+                    +583
+                  </button>
+                </div>
+              </div>
+              <div class="upcoming-fixture-body">
+                <div class="item">
+                  <div class="time">12:00</div>
+                  <div class="date">18/09</div>
+                </div>
+                <div class="item">
+                  <div class="team-home">
+                    <i class="fa-regular fa-star"></i>
+                    <span>Nottingham Forest SRL</span>
+                  </div>
+                  <div class="team-away">
+                    <i class="fa-regular fa-star"></i>
+                    <span>Burnley FC SRL</span>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="live">L</div>
+                </div>
+                <div class="item">
+                  <button class="bet-btn">
+                    <span class="rate">2.28</span>
+                    <span>1</span>
+                  </button> 
+                  <button class="bet-btn">
+                    <span class="rate">3.56</span>
+                    <span>X</span>
+                  </button>
+                  <button class="bet-btn">
+                    <span class="rate">3.23</span>
+                    <span>2</span>
+                  </button>
+                </div>
+                <div class="item">
+                  <button class="bet-btn active">
+                    <span class="rate">1.93</span>
+                    <span>Under 2.5</span>
+                  </button>
+                  <button class="bet-btn">
+                    <span class="rate">1.96</span>
+                    <span>Over 2.5</span>
+                  </button>
+                </div>
+                <div class="item">
+                  <i class="fa-solid fa-chart-simple"></i>
+                </div>
+                <div class="item">
+                  <button class="bet-btn">
+                    +583
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="casino-games">
+          <div class="casino-games-header">
+            Casino Games
+          </div>
+          <div class="casino-games-content" style="border:1px solid red">
+            <div class="casino-card">
+              <div class="card-img">
+                <img src="img/csn1.jpeg">
+                <span class="game-info">Popular</span>
+                <div class="card-hover">
+                  <button class="real">Play Online</button>
+                </div>
+              </div>
+              <div class="card-name">The Euro Game</div>
+            </div>
+            <div class="casino-card">
+              <div class="card-img">
+                <img src="img/csn2.jpeg">
+                <span class="game-info">Popular</span>
+                <div class="card-hover">
+                  <button class="real">Play Online</button>
+                  <button class="free">Free Play</button>
+                </div>
+              </div>
+              <div class="card-name">Power Stars</div>
+            </div>
+            <div class="casino-card">
+              <div class="card-img">
+                <img src="img/csn3.jpeg">
+                <span class="game-info">Popular</span>
+                <div class="card-hover">
+                  <button class="free">Free Play</button>
+                </div>
+              </div>
+              <div class="card-name">Art of Gold</div>
+            </div>
+            <div class="casino-card">
+              <div class="card-img">
+                <img src="img/csn4.jpeg">
+                <span class="game-info">Popular</span>
+                <div class="card-hover">
+                  <button class="real">Play Online</button>
+                  <button class="free">Free Play</button>
+                </div>
+              </div>
+              <div class="card-name">40 Bulky Fruits</div>
+            </div>
+            <div class="casino-card">
+              <div class="card-img">
+                <img src="img/csn5.jpeg">
+                <span class="game-info">Popular</span>
+                <div class="card-hover">
+                  <button class="real">Play Online</button>
+                </div>
+              </div>
+              <div class="card-name">Candy Palace</div>
+            </div>
+            <div class="casino-card">
+              <div class="card-img">
+                <img src="img/csn6.jpeg">
+                <span class="game-info">Popular</span>
+                <div class="card-hover">
+                  <button class="real">Play Online</button>
+                  <button class="free">Free Play</button>
+                </div>
+              </div>
+              <div class="card-name">Hot Slot: 777 Crown</div>
+            </div>
+            <div class="casino-card">
+              <div class="card-img">
+                <img src="img/csn7.jpeg">
+                <span class="game-info">Popular</span>
+                <div class="card-hover">
+                  <button class="free">Free Play</button>
+                </div>
+              </div>
+              <div class="card-name">RIP City</div>
+            </div>
+            <div class="casino-card">
+              <div class="card-img">
+                <img src="img/csn8.jpeg">
+                <span class="game-info">Popular</span>
+                <div class="card-hover">
+                  <button class="real">Play Online</button>
+                  <button class="free">Free Play</button>
+                </div>
+              </div>
+              <div class="card-name">Sugar Rush</div>
+            </div>
+            <div class="casino-card">
+              <div class="card-img">
+                <img src="img/csn9.jpeg">
+                <span class="game-info">Popular</span>
+                <div class="card-hover">
+                  <button class="real">Play Online</button>
+                </div>
+              </div>
+              <div class="card-name">The Dog House</div>
+            </div>
+            <div class="casino-card">
+              <div class="card-img">
+                <img src="img/csn10.jpeg">
+                <span class="game-info">Popular</span>
+                <div class="card-hover">
+                  <button class="real">Play Online</button>
+                  <button class="free">Free Play</button>
+                </div>
+              </div>
+              <div class="card-name">Sweet Bonanza</div>
+
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="right-container">
+        <section class="league-module">
+          <div class="league-header">
+            <img src="img/league-module.jpeg">
+            <div class="img-title">
+              <div class="img-title-left">
+                <div class="first-line">
+                  <i class="country icon-32xESP"></i>
+                  LaLiga 23/24
+                </div>
+                <div class="second-line">
+                  <i class="icon fa-regular fa-futbol"></i>
+                  Football
+                </div>
+              </div>
+              <button class="btn-season">Go To Season</button>
+            </div>
+          </div>
+          <div class="league-content">
+            <ul class="fixture-list-view">
+              <li>
+                <div class="fixture-list-view-header">
+                  <span class="match">Rayo Vallecano - Deportivo Alaves</span>
+                  <span class="bet-type">1x2</span>
+                  <span class="date">15-09-23 22:00</span>
+                  <button class="other-btn">+901</button>
+                </div>
+                <div class="fixture-list-view-body">
+                  <div class="bet-btn-group">
+                    <button class="bet-btn active">
+                      <span class="rate">1.98</span>
+                      <span>Rayo Vallecano</span>
+                    </button> 
+                    <button class="bet-btn">
+                      <span class="rate">3.37</span>
+                      <span>X</span>
+                    </button>
+                    <button class="bet-btn">
+                      <span class="rate">4.56</span>
+                      <span>Deportivo Alaves</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="fixture-list-view-header">
+                  <span class="match">Athletic Bilbao - Cadiz CF</span>
+                  <span class="bet-type">1x2</span>
+                  <span class="date">16-09-23 15:00</span>
+                  <button class="other-btn">+904</button>
+                </div>
+                <div class="fixture-list-view-body">
+                  <div class="bet-btn-group">
+                    <button class="bet-btn">
+                      <span class="rate">1.59</span>
+                      <span>Athletic Bilbao</span>
+                    </button> 
+                    <button class="bet-btn active">
+                      <span class="rate">4.20</span>
+                      <span>X</span>
+                    </button>
+                    <button class="bet-btn">
+                      <span class="rate">6.60</span>
+                      <span>Cadiz CF</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="fixture-list-view-header">
+                  <span class="match">Valencia CF - Atletico Madrid</span>
+                  <span class="bet-type">1x2</span>
+                  <span class="date">16-09-23 17:15</span>
+                  <button class="other-btn">+894</button>
+                </div>
+                <div class="fixture-list-view-body">
+                  <div class="bet-btn-group">
+                    <button class="bet-btn">
+                      <span class="rate">3.92</span>
+                      <span>Valencia CF</span>
+                    </button> 
+                    <button class="bet-btn">
+                      <span class="rate">3.48</span>
+                      <span>X</span>
+                    </button>
+                    <button class="bet-btn">
+                      <span class="rate">2.09</span>
+                      <span>Atletico Madrid</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </main>
+    <!-- Main Container::End -->
+
+    <!-- Right Sidebar::Begin -->
+    <aside id="rightSidebar" class="right-sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeRightSidebar()">
+        <i class="fa-solid fa-xmark"></i>
+      </a>
+      <section class="bet-slip">
+        <div class="bet-slip-header">
+          <div class="bet-slip-title">
+            <span>Betslip</span>
+            <span class="count">3</span>
+          </div>
+          <div class="bet-slip-action">
+            <button>
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div>
+        <div class="bet-slip-content">
+          <ul class="bet-slip-tabs">
+            <li class="tab">
+              <a href="#">Single</a>
+            </li>
+            <li class="tab">
+              <a href="#" class="active">Multi</a>
+            </li>
+            <li class="tab">
+              <a href="#">System</a>
+            </li>
+          </ul>
+          <div class="coupon-container">
+            <div class="coupon">
+              <div class="match-check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <div class="match-info">
+                <div class="teams">Galatasaray - Samsunspor</div>
+                <div class="btg-name">1x2:</div>
+                <div class="selection">Galatasaray</div>
+              </div>
+              <div class="match-action">
+                <div class="coupon-close">
+                  <button>
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+                <div class="match-rate">1.39</div>
+              </div>
+            </div>
+            <div class="coupon">
+              <div class="match-check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <div class="match-info">
+                <div class="teams">Adana Demirspor - Pendikspor</div>
+                <div class="btg-name">1x2:</div>
+                <div class="selection">Adana Demirspor</div>
+              </div>
+              <div class="match-action">
+                <div class="coupon-close">
+                  <button>
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+                <div class="match-rate">1.52</div>
+              </div>
+            </div>
+            <div class="coupon-amount">
+              <input type="number" placeholder="0.00">
+            </div>
+          </div>
+          <div class="coupon-footer">
+            <div class="total-container">
+              <div class="total-coupon">
+                <div class="total-coupon-title">Bet Count:</div>
+                <div class="total-coupon-num">2</div>
+              </div>
+              <div class="total-rate">
+                <div class="total-rate-title">Total Odds:</div>
+                <div class="total-rate-num">2.11</div>
+              </div>
+            </div>
+            <div class="check-group">
+              <div class="check">
+                <input type="checkbox" id="check-group1" class="filled-in">
+                <label for="check-group1" class="bet-slip-check">Accept all odds changes</label>
+              </div>
+              <div class="check">
+                <input type="checkbox" id="check-group1" class="filled-in">
+                <label for="check-group1" class="bet-slip-check">Accept only increasing odds</label>
+              </div>
+            </div>
+            <div class="footer-button-main">
+              <button class="confirm-bet-btn">Place Bet</button>
+              <button class="reserve-bet-btn">Reserve</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="numpad">
+        <div class="numpad-header">
+          Coupon Check
+        </div>
+        <div class="numpad-content">
+          <div class="flex-container fast-btns">
+            <button class="flex-item btn">
+              <span class="currency-symbol">₺</span>
+              <span>1</span>
+            </button>
+            <button class="flex-item btn">
+              <span class="currency-symbol">₺</span>
+              <span>5</span>
+            </button>
+            <button class="flex-item btn">
+              <span class="currency-symbol">₺</span>
+              <span>10</span>
+            </button>
+            <button class="flex-item btn">
+              <span class="currency-symbol">₺</span>
+              <span>25</span>
+            </button>
+            <button class="flex-item btn">
+              <span class="currency-symbol">₺</span>
+              <span>50</span>
+            </button>
+            <button class="flex-item btn">
+              <span class="currency-symbol">₺</span>
+              <span>100</span>
+            </button>
+          </div>
+          <div class="numbers-cont">
+            <button class="item">1</button>
+            <button class="item">2</button>
+            <button class="item">3</button>
+            <button class="item">4</button>
+            <button class="item">5</button>
+            <button class="item">6</button>
+            <button class="item">7</button>
+            <button class="item">8</button>
+            <button class="item">9</button>
+            <button class="item zero">0</button>
+            <button class="item">,</button>
+            <button class="item backspace">
+              <i class="icon">←</i>
+            </button>
+            <button class="item enter">Ok</button>
+          </div>
+        </div>
+      </section>
+    </aside>
+    <!-- Right Sidebar::End -->
+
+  </section>
+  <!-- Content::End -->
+</body>
+</html>
