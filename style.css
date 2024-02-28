@@ -13,14 +13,11 @@ body {
 .content {
   display: flex;
   justify-content: space-between;
+  margin: 15px;
 }
 
 .league-header img {
   width: 200px;
-}
-
-.live-menu-container {
-  margin: 20px;
 }
 
 .live-menu-container ul a {
@@ -64,6 +61,7 @@ body {
   border-radius: 4px;
   padding: 10px;
   cursor: pointer;
+  margin: 0 2px;
 }
 .bet-btn:hover {
   background-color: #f16442;
@@ -119,16 +117,20 @@ button.active {
 
 .main-container {
   display: flex;
-  width: 65%;
+  width: 70%;
 }
 
 .left-container {
   width: 75%;
+  margin: 0 15px;
 }
 
 .today-events-header {
   background-color: #333a53;
   color: #97999d;
+  padding: 10px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 .today-events-content {
@@ -137,16 +139,73 @@ button.active {
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
+  background-color: #2b3750;
+  padding: 4px;
+}
+.today-events-content .event-item {
+  cursor: pointer;
+  color: #97999d;
+  background-color: #373f5d;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 4px;
+  font-size: 12px;
+  text-align: center;
+}
+.today-events-content .event-item .icon {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.today-events-content .event-item:hover, .today-events-content .event-item.active {
+  color: #fff;
+}
+.today-events-content .event-item .count {
+  position: relative;
+  left: 20px;
+  bottom: 50px;
+  font-size: 10px;
+  background-color: #47537a;
+  border-radius: 50%;
+  padding: 2px;
 }
 
 .upcoming-events-header {
+  color: #97999d;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin-top: 15px;
+  background-color: #343c56;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
 }
-
-.upcoming-tabs {
+.upcoming-events-header .upcoming-tabs {
   display: flex;
-  justify-content: space-between;
+  text-decoration: none;
+  cursor: pointer;
+}
+.upcoming-events-header .upcoming-tabs .tab .fa-solid {
+  color: gray;
+}
+.upcoming-events-header .upcoming-tabs .active .fa-solid,
+.upcoming-events-header .upcoming-tabs .active,
+.upcoming-events-header .upcoming-tabs .tab a:hover {
+  background-color: #2c354c;
+  color: #fff;
+  border-top: 2px solid #efc760;
+}
+.upcoming-events-header .upcoming-tabs .tab-text {
+  display: none;
+}
+.upcoming-events-header .upcoming-tabs .active .tab-text {
+  display: block;
+}
+
+.upcoming-events-content {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-color: #2e364e;
+  padding: 4px;
 }
 
 .tab i.fa-solid {
@@ -154,6 +213,9 @@ button.active {
 }
 
 .upcoming-fixture-header {
+  color: #97999d;
+  font-size: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
 }
@@ -163,12 +225,56 @@ button.active {
   justify-content: space-around;
 }
 
+.casino-games-header {
+  color: #97999d;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: #343c56;
+  padding: 10px;
+  margin-top: 15px;
+}
+
 .casino-games-content {
+  cursor: pointer;
+  padding: 15px;
+  font-size: 10px;
+  background-color: #2e3650;
   display: flex;
   justify-content: space-between;
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
+}
+.casino-games-content .card-img img {
+  width: 150px;
+  margin: 0 5px;
+  border-radius: 10px;
+}
+.casino-games-content .game-info {
+  background-color: #378fcc;
+  border-radius: 8px;
+  padding: 3px 6px;
+  text-transform: uppercase;
+}
+.casino-games-content .real, .casino-games-content .free {
+  border: none;
+  background-color: #455377;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.casino-games-content .real {
+  background-color: #f16442;
+}
+.casino-games-content .free {
+  background-color: #346888;
+}
+.casino-games-content .card-name {
+  font-size: 12px;
+  text-align: center;
+  color: #97999d;
 }
 
 .img-title {
