@@ -28,12 +28,11 @@ body {
 
 .content {
   display: flex;
-  justify-content: space-between;
   margin: 15px;
 }
 
 .left-sidebar {
-  width: 15%;
+  width: 13%;
 }
 .left-sidebar .closebtn {
   background-color: #252c3c;
@@ -170,7 +169,7 @@ button.active {
 
 .main-container {
   display: flex;
-  width: 70%;
+  width: 62%;
 }
 
 .left-container {
@@ -223,7 +222,6 @@ button.active {
 }
 
 .upcoming-events-header {
-  color: #97999d;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   margin-top: 15px;
@@ -236,6 +234,9 @@ button.active {
   display: flex;
   text-decoration: none;
   cursor: pointer;
+}
+.upcoming-events-header .upcoming-tabs .tab {
+  margin: 0 10px;
 }
 .upcoming-events-header .upcoming-tabs .tab .fa-solid {
   color: gray;
@@ -416,6 +417,9 @@ button.active {
   border: none;
 }
 
+#rightSidebar {
+  width: 13%;
+}
 #rightSidebar .closebtn .fa-xmark {
   display: none;
   font-size: 20px;

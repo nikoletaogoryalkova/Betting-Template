@@ -36,12 +36,12 @@ body {
 
 .content {
     display: flex;
-    justify-content: space-between;
+ //   justify-content: space-between;
     margin: 15px;
 }
 
 .left-sidebar {
-    width: 15%;
+    width: 13%;
 
     .closebtn {
         background-color: #252c3c;
@@ -202,7 +202,7 @@ button.active {
 .main-container {
     display: flex;
     // justify-content: space-between;
-    width: 70%;
+    width: 62%;
 }
 
 .left-container {
@@ -264,7 +264,6 @@ button.active {
 }
 
 .upcoming-events-header {
-    color: $text-color-gray;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     margin-top: 15px;
@@ -277,6 +276,11 @@ button.active {
         display: flex;
         text-decoration: none;
         cursor: pointer;
+        
+        .tab {
+            margin: 0 10px;
+
+        }
 
         .tab .fa-solid {
             color: gray;
@@ -434,7 +438,7 @@ button.active {
 .right-container {
     color: $text-color-gray;
     font-size: 12px;
-    width: 40%;
+    width:40%;
 
     .league-content {
         background-color: #2e364e;
@@ -492,6 +496,7 @@ button.active {
 }
 
 #rightSidebar {
+    width: 13%;
     .closebtn .fa-xmark {
         display: none;
         font-size: 20px;
