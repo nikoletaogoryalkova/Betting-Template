@@ -21,8 +21,8 @@ body {
     margin: 15px;
 }
 
-.league-header img {
-    width: 200px;
+.left-sidebar {
+    width: 15%;
 }
 
 // .live-menu-container {
@@ -149,7 +149,7 @@ button.active {
 }
 
 .left-container {
-    width: 75%;
+    width: 65%;
     margin: 0 15px;
 }
 
@@ -247,6 +247,32 @@ button.active {
     border-bottom-right-radius: 6px;
     background-color: #2e364e;
     padding: 4px;
+    font-size: 12px;
+
+    .upcoming-fixture-body {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 10px;
+
+        .time {
+            color: #378fcc;
+        }
+
+        .date {
+            color: $text-color-gray;
+        }
+
+        .fa-star {
+            color: #efc760;
+        }
+
+        .live {
+            background-color: $text-color-green;
+            padding: 1px 15px;
+            border-top-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            font-size: 12px;
+        }
+    }
 }
 
 
@@ -289,47 +315,241 @@ button.active {
     overflow-x: auto;
     overflow-y: hidden;
 
-    .card-img img {
-        width: 150px;
-        margin: 0 5px;
-        border-radius: 10px;
-    }
-    .game-info {
-        background-color: #378fcc;
-        border-radius: 8px;
-        padding: 3px 6px;
-        text-transform: uppercase;
-    }
-    .real, .free {
-        border: none;
-        background-color: $bet-btn-base-bg-color;
-        color: $text-color-white;
-        border: none;
-        border-radius: 6px;
-        padding: 5px 15px;
-        cursor: pointer;
-    }
-    .real {
-        background-color: $bet-btn-bg-color-selected;
-    }
-    .free {
-        background-color: #346888;
-    }
+    .casino-card {
 
-    .card-name {
-        font-size: 12px;
-        text-align: center;
-        color: $text-color-gray;
+        .card-img img {
+            width: 150px;
+            margin: 0 5px;
+            border-radius: 10px;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+        }
+
+        .game-info {
+            position: relative;
+            bottom: 93px;
+            left: 10px;
+            background-color: #378fcc;
+            border-radius: 4px;
+            padding: 1px 4px;
+            text-transform: uppercase;
+        }
+
+        .real,
+        .free {
+            // display: none;
+            position: relative;
+            bottom: 85px;
+            left: 25px;
+            width: 70%;
+            margin: 2px 0;
+            border: none;
+            background-color: $bet-btn-base-bg-color;
+            color: $text-color-white;
+            border: none;
+            border-radius: 6px;
+            padding: 5px 5px;
+            cursor: pointer;
+        }
+
+        .real {
+            background-color: $bet-btn-bg-color-selected;
+        }
+
+        .free {
+            background-color: #346888;
+        }
+
+        .card-name {
+            font-size: 12px;
+            text-align: center;
+            color: $text-color-gray;
+        }
     }
 }
 
-.img-title {
-    display: flex;
-    justify-content: space-between;
+.right-container {
+    color: $text-color-gray;
+    font-size: 12px;
+    width: 40%;
+
+    .league-content {
+        background-color: #2e364e;
+
+        .fixture-list-view li {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    .league-header img {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        width: 100%;
+    }
+
+    .img-title {
+        color: $text-color-white;
+        position: relative;
+        bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        .first-line {
+            font-size: 16px;
+        }
+    }
+
+    .btn-season {
+        cursor: pointer;
+        background-color: $bet-btn-base-bg-color;
+        color: $text-color-white;
+        border-radius: 4px;
+        border: none;
+    }
+
+    .fixture-list-view-header {
+        display: flex;
+    }
+
+    .other-btn {
+        cursor: pointer;
+        background-color: $bet-btn-base-bg-color;
+        color: $text-color-white;
+        border-radius: 4px;
+        border: none;
+    }
 }
 
 .bet-slip {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    font-size: 14px;
     color: $text-color-black;
+    background-color: #dbe6f2;
+    padding: 5px;
+
+    .bet-slip-content {
+        font-size: 12px;
+
+        .bet-slip-tabs a {
+            color: $text-color-gray;
+            // opacity: 0.3;
+
+            .tab a .active,
+            &:hover {
+                border-bottom: 4px solid #ed6445;
+                opacity: 1;
+                color: $text-color-black;
+            }
+        }
+
+        .coupon {
+            border-radius: 6px;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #fff;
+
+            .match-check .fa-circle-check {
+                color: #b0b3b0;
+                font-size: 18px;
+            }
+
+            .selection {
+                font-weight: bold;
+            }
+
+            .coupon-close {
+                button {
+                    cursor: pointer;
+                    border: none;
+                    background-color: #fff;
+
+                    .fa-xmark {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .btg-name {
+                color: $text-color-gray;
+            }
+
+            .match-rate {
+                color: #ed6445;
+                font-weight: bold;
+            }
+        }
+
+        .coupon-amount input {
+            cursor: pointer;
+            border: 10px solid #252941;
+            border-radius: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+            // input::placeholder {
+            //     border-radius: 10px;
+            // }
+        }
+    }
+
+    .coupon-footer {
+        background-color: #fff;
+        padding: 2px;
+
+        .total-container {
+            font-weight: bold;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+            .total-coupon-num,
+            .total-rate-num {
+                color: #ed6445;
+            }
+        }
+
+        .check input {
+            cursor: pointer;
+        }
+
+        .confirm-bet-btn,
+        .reserve-bet-btn {
+            background-color: $bet-btn-bg-color-active;
+            color: $text-color-white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer;
+            margin: 2px;
+        }
+
+        .reserve-bet-btn {
+            background-color: #252b3f;
+        }
+    }
+
+    .bet-slip-title .count {
+        background-color: #b2b2b4;
+        color: $text-color-white;
+        border-radius: 50%;
+        padding: 0 4px;
+    }
+
+    .bet-slip-action {
+        button {
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            background-color: #dbe6f2;
+        }
+
+        .fa-trash {
+            color: #356987;
+        }
+    }
+
+
 }
 
 .bet-slip-header {
@@ -340,10 +560,6 @@ button.active {
 .bet-slip-tabs {
     display: flex;
     justify-content: space-around;
-}
-
-.coupon-amount input {
-    width: 100%;
 }
 
 .coupon {
@@ -365,13 +581,38 @@ button.active {
     width: 100%;
 }
 
-.fast-btns {
-    display: flex;
+.numpad {
+    background-color: #343c56;
+
+    .numpad-header {
+        color: $text-color-gray;
+    }
 }
+
+.numpad-content {
+    .fast-btns {
+        display: flex;
+        .flex-item{
+            cursor: pointer;
+            background-color: $bet-btn-bg-color-active;
+            color: $text-color-white;
+            border: none;
+            border-radius: 4px;
+        }
+    }
+}
+
 
 .numbers-cont {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    .item {
+        cursor: pointer;
+        color: $text-color-white;
+        background-color: $bet-btn-base-bg-color;
+        border-radius: 2px;
+        border: none;
+    }
 }
 
 // .icon, .enter {

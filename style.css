@@ -16,8 +16,8 @@ body {
   margin: 15px;
 }
 
-.league-header img {
-  width: 200px;
+.left-sidebar {
+  width: 15%;
 }
 
 .live-menu-container ul a {
@@ -121,7 +121,7 @@ button.active {
 }
 
 .left-container {
-  width: 75%;
+  width: 65%;
   margin: 0 15px;
 }
 
@@ -206,6 +206,27 @@ button.active {
   border-bottom-right-radius: 6px;
   background-color: #2e364e;
   padding: 4px;
+  font-size: 12px;
+}
+.upcoming-events-content .upcoming-fixture-body {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px;
+}
+.upcoming-events-content .upcoming-fixture-body .time {
+  color: #378fcc;
+}
+.upcoming-events-content .upcoming-fixture-body .date {
+  color: #97999d;
+}
+.upcoming-events-content .upcoming-fixture-body .fa-star {
+  color: #efc760;
+}
+.upcoming-events-content .upcoming-fixture-body .live {
+  background-color: #3ebe56;
+  padding: 1px 15px;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  font-size: 12px;
 }
 
 .tab i.fa-solid {
@@ -245,45 +266,191 @@ button.active {
   overflow-x: auto;
   overflow-y: hidden;
 }
-.casino-games-content .card-img img {
+.casino-games-content .casino-card .card-img img {
   width: 150px;
   margin: 0 5px;
   border-radius: 10px;
 }
-.casino-games-content .game-info {
+.casino-games-content .casino-card .card-img img:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.casino-games-content .casino-card .game-info {
+  position: relative;
+  bottom: 93px;
+  left: 10px;
   background-color: #378fcc;
-  border-radius: 8px;
-  padding: 3px 6px;
+  border-radius: 4px;
+  padding: 1px 4px;
   text-transform: uppercase;
 }
-.casino-games-content .real, .casino-games-content .free {
+.casino-games-content .casino-card .real,
+.casino-games-content .casino-card .free {
+  position: relative;
+  bottom: 85px;
+  left: 25px;
+  width: 70%;
+  margin: 2px 0;
   border: none;
   background-color: #455377;
   color: #fff;
   border: none;
   border-radius: 6px;
-  padding: 5px 15px;
+  padding: 5px 5px;
   cursor: pointer;
 }
-.casino-games-content .real {
+.casino-games-content .casino-card .real {
   background-color: #f16442;
 }
-.casino-games-content .free {
+.casino-games-content .casino-card .free {
   background-color: #346888;
 }
-.casino-games-content .card-name {
+.casino-games-content .casino-card .card-name {
   font-size: 12px;
   text-align: center;
   color: #97999d;
 }
 
-.img-title {
+.right-container {
+  color: #97999d;
+  font-size: 12px;
+  width: 40%;
+}
+.right-container .league-content {
+  background-color: #2e364e;
+}
+.right-container .league-content .fixture-list-view li {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.right-container .league-header img {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  width: 100%;
+}
+.right-container .img-title {
+  color: #fff;
+  position: relative;
+  bottom: 50px;
   display: flex;
   justify-content: space-between;
 }
+.right-container .img-title .first-line {
+  font-size: 16px;
+}
+.right-container .btn-season {
+  cursor: pointer;
+  background-color: #455377;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+}
+.right-container .fixture-list-view-header {
+  display: flex;
+}
+.right-container .other-btn {
+  cursor: pointer;
+  background-color: #455377;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+}
 
 .bet-slip {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  font-size: 14px;
   color: #000;
+  background-color: #dbe6f2;
+  padding: 5px;
+}
+.bet-slip .bet-slip-content {
+  font-size: 12px;
+}
+.bet-slip .bet-slip-content .bet-slip-tabs a {
+  color: #97999d;
+}
+.bet-slip .bet-slip-content .bet-slip-tabs a .tab a .active, .bet-slip .bet-slip-content .bet-slip-tabs a:hover {
+  border-bottom: 4px solid #ed6445;
+  opacity: 1;
+  color: #000;
+}
+.bet-slip .bet-slip-content .coupon {
+  border-radius: 6px;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fff;
+}
+.bet-slip .bet-slip-content .coupon .match-check .fa-circle-check {
+  color: #b0b3b0;
+  font-size: 18px;
+}
+.bet-slip .bet-slip-content .coupon .selection {
+  font-weight: bold;
+}
+.bet-slip .bet-slip-content .coupon .coupon-close button {
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+}
+.bet-slip .bet-slip-content .coupon .coupon-close button .fa-xmark {
+  font-size: 16px;
+}
+.bet-slip .bet-slip-content .coupon .btg-name {
+  color: #97999d;
+}
+.bet-slip .bet-slip-content .coupon .match-rate {
+  color: #ed6445;
+  font-weight: bold;
+}
+.bet-slip .bet-slip-content .coupon-amount input {
+  cursor: pointer;
+  border: 10px solid #252941;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.bet-slip .coupon-footer {
+  background-color: #fff;
+  padding: 2px;
+}
+.bet-slip .coupon-footer .total-container {
+  font-weight: bold;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.bet-slip .coupon-footer .total-container .total-coupon-num,
+.bet-slip .coupon-footer .total-container .total-rate-num {
+  color: #ed6445;
+}
+.bet-slip .coupon-footer .check input {
+  cursor: pointer;
+}
+.bet-slip .coupon-footer .confirm-bet-btn,
+.bet-slip .coupon-footer .reserve-bet-btn {
+  background-color: #f16442;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 2px;
+}
+.bet-slip .coupon-footer .reserve-bet-btn {
+  background-color: #252b3f;
+}
+.bet-slip .bet-slip-title .count {
+  background-color: #b2b2b4;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0 4px;
+}
+.bet-slip .bet-slip-action button {
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  background-color: #dbe6f2;
+}
+.bet-slip .bet-slip-action .fa-trash {
+  color: #356987;
 }
 
 .bet-slip-header {
@@ -294,10 +461,6 @@ button.active {
 .bet-slip-tabs {
   display: flex;
   justify-content: space-around;
-}
-
-.coupon-amount input {
-  width: 100%;
 }
 
 .coupon {
@@ -319,11 +482,32 @@ button.active {
   width: 100%;
 }
 
-.fast-btns {
+.numpad {
+  background-color: #343c56;
+}
+.numpad .numpad-header {
+  color: #97999d;
+}
+
+.numpad-content .fast-btns {
   display: flex;
+}
+.numpad-content .fast-btns .flex-item {
+  cursor: pointer;
+  background-color: #f16442;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
 }
 
 .numbers-cont {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+.numbers-cont .item {
+  cursor: pointer;
+  color: #fff;
+  background-color: #455377;
+  border-radius: 2px;
+  border: none;
 }/*# sourceMappingURL=style.css.map */
