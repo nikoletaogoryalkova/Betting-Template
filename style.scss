@@ -23,16 +23,94 @@ body {
     width: 200px;
 }
 
+.live-menu-container {
+    margin: 20px;
+    // ul li a:first-child  {
+    //     border-top-left-radius: 10px;
+    //     border-top-right-radius: 10px;
+    // }
+}
+
 .live-menu-container ul a {
     display: flex;
     justify-content: space-between;
+    background-color: #36405b;
+    padding: 10px 10px;
+    color: $text-color-white;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
 }
 
-// .team-infos {
-//    display: grid;
-// }
+.team-infos {
+    display: grid;
+    gap: 6px;
+}
+
+.match-infos {
+    background-color: #2e364e;
+    padding: 10px;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    .time,
+    .market-name {
+        color: $text-color-gray;
+        margin: 5px 0 ;
+    }
+
+    .score {
+        color: $text-color-green;
+        font-weight: bold;
+    }
+
+    .fa-star {
+        color: #efc760;
+    }
+
+}
+
+
+
+.bet-btn {
+    background-color: $bet-btn-base-bg-color;
+    color: $text-color-white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+
+    // margin: 2px;
+    &:hover {
+        background-color: $bet-btn-bg-color-hover;
+        transition: all 0.3s ease;
+    }
+}
+
+button.active {
+    background-color: $bet-btn-bg-color-active;
+}
+
+
+
 .tabs-container {
     text-align: center;
+
+    .tab-item,
+    .live:hover {
+        cursor: pointer;
+        background-color: #3e4a6b;
+        color: $text-color-white;
+        border-radius: 20px;
+        padding: 15px 25px;
+        border: none;
+    }
+
+    .live {
+        background-color: #252b3c;
+        color: $text-color-gray;
+        border: none;
+    }
 }
 
 .range-container {
@@ -40,11 +118,6 @@ body {
 
     input {
         width: 100%;
-    }
-
-    .range-numbers {
-        color: $text-color-white;
-        font-size: 12px;
     }
 }
 
@@ -62,14 +135,18 @@ body {
     justify-content: space-between;
 }
 
+.bet-btn-group {
+    display: flex;
+}
+
 .main-container {
     display: flex;
-   // justify-content: space-between;
+    // justify-content: space-between;
     width: 65%;
 }
 
 .left-container {
-    width: 50%;
+    width: 75%;
 }
 
 .today-events-header {
@@ -107,7 +184,8 @@ body {
 
 .upcoming-fixture-body {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+
 }
 
 .casino-games-content {
@@ -121,6 +199,10 @@ body {
 .img-title {
     display: flex;
     justify-content: space-between;
+}
+
+.bet-slip {
+    color: $text-color-black;
 }
 
 .bet-slip-header {
