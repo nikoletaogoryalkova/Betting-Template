@@ -237,7 +237,7 @@ button.active {
         margin: 5px;
         margin: auto;
         margin-right: 0.7em;
-     
+
         .icon {
             font-size: 25px;
         }
@@ -331,7 +331,32 @@ button.active {
         margin: 1em 0;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+
+        .item:nth-of-type(2) {
+            width: 25%;
+        }
+
+        .item:nth-of-type(4) {
+            width: 38%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .item:nth-of-type(5) {
+            width: 33%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .item:nth-of-type(7) {
+            width: 9%;
+        }
+
+        .item {
+            margin: 0 5px;
+
+        }
+
         .time {
             color: #378fcc;
         }
@@ -351,22 +376,26 @@ button.active {
             border-bottom-right-radius: 6px;
             font-size: 12px;
         }
+
         .bet-btn {
             margin-bottom: 0.5em;
+
             span {
-            display: flex;
-            justify-content: center;
-            &:last-child {
-                font-size: 11px;
-                opacity: 0.5;
+                display: flex;
+                justify-content: center;
+
+                &:last-child {
+                    font-size: 11px;
+                    opacity: 0.5;
+                }
             }
         }
+
+        .fa-chart-simple {
+            font-size: 15px;
+
+        }
     }
-    .fa-chart-simple {
-        font-size: 15px;
-       
-    }
-}
 }
 
 
@@ -419,7 +448,7 @@ button.active {
                 margin: 0 5px;
                 border-radius: 10px;
             }
-            
+
         }
 
 
@@ -436,7 +465,7 @@ button.active {
 
         .real,
         .free {
-           // display: none;
+            // display: none;
             width: 70%;
             background-color: $bet-btn-base-bg-color;
             color: $text-color-white;
@@ -456,8 +485,8 @@ button.active {
             transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
         }
-        
-       .free {
+
+        .free {
             position: absolute;
             top: 35%;
             left: 50%;
@@ -731,17 +760,21 @@ button.active {
     .numpad-header {
         color: $text-color-gray;
         font-size: 14px;
-        padding: 10px;
+        padding: 8px;
     }
 }
 
 .numpad-content {
-    padding: 10px;
+    padding: 5px;
 
     .fast-btns {
         display: flex;
 
         .flex-item {
+            width: 100%;
+            font-size: 10px;
+            padding: 5px 2px;
+            margin: 0 2px;
             cursor: pointer;
             background-color: $bet-btn-bg-color-active;
             color: $text-color-white;
@@ -755,21 +788,32 @@ button.active {
 .numbers-cont {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    margin-top: 5px;
 
     .item {
         cursor: pointer;
         color: $text-color-white;
         background-color: #222b42;
-        border-radius: 2px;
+        border-radius: 4px;
         border: none;
+        padding: 10px 20px;
+
+    }
+    .backspace {
+        background-color: #346886;
+        grid-area: 1 / 6 / 3 / 4;
+        padding: 20px;
     }
 
-    .backspace,
     .enter {
         background-color: #346886;
+        grid-area: 3 / 6 / 6 / 4;
+        padding: 20px;
     }
+
+//     .zero {
+//        padding: 10px 45px;
+//       width: 100%;
+//    }
 }
-
-// .icon, .enter {
-
-// }

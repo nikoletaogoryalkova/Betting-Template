@@ -284,7 +284,25 @@ button.active {
   margin: 1em 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+.upcoming-events-content .upcoming-fixture-body .item:nth-of-type(2) {
+  width: 25%;
+}
+.upcoming-events-content .upcoming-fixture-body .item:nth-of-type(4) {
+  width: 38%;
+  display: flex;
+  justify-content: center;
+}
+.upcoming-events-content .upcoming-fixture-body .item:nth-of-type(5) {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+}
+.upcoming-events-content .upcoming-fixture-body .item:nth-of-type(7) {
+  width: 9%;
+}
+.upcoming-events-content .upcoming-fixture-body .item {
+  margin: 0 5px;
 }
 .upcoming-events-content .upcoming-fixture-body .time {
   color: #378fcc;
@@ -617,16 +635,20 @@ button.active {
 .numpad .numpad-header {
   color: #97999d;
   font-size: 14px;
-  padding: 10px;
+  padding: 8px;
 }
 
 .numpad-content {
-  padding: 10px;
+  padding: 5px;
 }
 .numpad-content .fast-btns {
   display: flex;
 }
 .numpad-content .fast-btns .flex-item {
+  width: 100%;
+  font-size: 10px;
+  padding: 5px 2px;
+  margin: 0 2px;
   cursor: pointer;
   background-color: #f16442;
   color: #fff;
@@ -637,15 +659,24 @@ button.active {
 .numbers-cont {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  margin-top: 5px;
 }
 .numbers-cont .item {
   cursor: pointer;
   color: #fff;
   background-color: #222b42;
-  border-radius: 2px;
+  border-radius: 4px;
   border: none;
+  padding: 10px 20px;
 }
-.numbers-cont .backspace,
+.numbers-cont .backspace {
+  background-color: #346886;
+  grid-area: 1/6/3/4;
+  padding: 20px;
+}
 .numbers-cont .enter {
   background-color: #346886;
+  grid-area: 3/6/6/4;
+  padding: 20px;
 }/*# sourceMappingURL=style.css.map */
