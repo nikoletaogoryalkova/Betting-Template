@@ -28,7 +28,7 @@ body {
 
 .content {
   display: flex;
-  margin: 15px;
+  margin: 0.8em;
 }
 
 .left-sidebar {
@@ -43,13 +43,22 @@ body {
 }
 
 .live-menu-container ul a {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   background-color: #36405b;
   padding: 10px 10px;
-  color: #fff;
+  color: #97999d;
   font-size: 14px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.live-menu-container ul a:hover {
+  background-color: #36405b;
+  color: #fff;
+}
+.live-menu-container .m1-item a.m1-link:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 .team-infos {
@@ -169,11 +178,11 @@ button.active {
 
 .main-container {
   display: flex;
-  width: 62%;
+  width: 75%;
 }
 
 .left-container {
-  width: 65%;
+  width: 60%;
   margin: 0 15px;
 }
 
@@ -195,18 +204,18 @@ button.active {
   padding: 4px;
 }
 .today-events-content .event-item {
+  margin: 5px;
+  margin: auto;
+  margin-right: 0.7em;
   cursor: pointer;
   color: #97999d;
   background-color: #373f5d;
   border-radius: 5px;
-  padding: 10px;
-  margin: 4px;
   font-size: 12px;
   text-align: center;
 }
 .today-events-content .event-item .icon {
   font-size: 25px;
-  margin-bottom: 10px;
 }
 .today-events-content .event-item:hover, .today-events-content .event-item.active {
   color: #fff;
@@ -214,7 +223,7 @@ button.active {
 .today-events-content .event-item .count {
   position: relative;
   left: 20px;
-  bottom: 50px;
+  bottom: 35px;
   font-size: 10px;
   background-color: #47537a;
   border-radius: 50%;
@@ -234,37 +243,48 @@ button.active {
   display: flex;
   text-decoration: none;
   cursor: pointer;
+  font-size: 14px;
 }
 .upcoming-events-header .upcoming-tabs .tab {
   margin: 0 10px;
 }
+.upcoming-events-header .upcoming-tabs .tab .active .fa-solid {
+  color: #fff;
+}
 .upcoming-events-header .upcoming-tabs .tab .fa-solid {
   color: gray;
 }
-.upcoming-events-header .upcoming-tabs .active .fa-solid,
 .upcoming-events-header .upcoming-tabs .active,
 .upcoming-events-header .upcoming-tabs .tab a:hover {
+  padding: 0.5em;
+  display: flex;
   background-color: #2c354c;
   color: #fff;
+  border-radius: 4px;
   border-top: 2px solid #efc760;
 }
 .upcoming-events-header .upcoming-tabs .tab-text {
   display: none;
 }
 .upcoming-events-header .upcoming-tabs .active .tab-text {
+  margin: 0 0.2em;
   display: block;
+  font-size: 14px;
 }
 
 .upcoming-events-content {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   background-color: #2e364e;
-  padding: 4px;
+  padding: 10px;
   font-size: 12px;
 }
 .upcoming-events-content .upcoming-fixture-body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 10px;
+  margin: 1em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .upcoming-events-content .upcoming-fixture-body .time {
   color: #378fcc;
@@ -282,6 +302,20 @@ button.active {
   border-bottom-right-radius: 6px;
   font-size: 12px;
 }
+.upcoming-events-content .upcoming-fixture-body .bet-btn {
+  margin-bottom: 0.5em;
+}
+.upcoming-events-content .upcoming-fixture-body .bet-btn span {
+  display: flex;
+  justify-content: center;
+}
+.upcoming-events-content .upcoming-fixture-body .bet-btn span:last-child {
+  font-size: 11px;
+  opacity: 0.5;
+}
+.upcoming-events-content .upcoming-fixture-body .fa-chart-simple {
+  font-size: 15px;
+}
 
 .tab i.fa-solid {
   color: white;
@@ -293,11 +327,10 @@ button.active {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1em;
 }
-
-.upcoming-fixture-body {
-  display: flex;
-  justify-content: space-around;
+.upcoming-fixture-header .item {
+  margin: 0.2em 0;
 }
 
 .casino-games-header {
@@ -320,13 +353,16 @@ button.active {
   overflow-x: auto;
   overflow-y: hidden;
 }
+.casino-games-content .casino-card {
+  position: relative;
+}
+.casino-games-content .casino-card .card-img {
+  height: 11vh;
+}
 .casino-games-content .casino-card .card-img img {
-  width: 150px;
+  width: 15vh;
   margin: 0 5px;
   border-radius: 10px;
-}
-.casino-games-content .casino-card .card-img img:hover {
-  background-color: rgba(255, 255, 255, 0.9);
 }
 .casino-games-content .casino-card .game-info {
   position: relative;
@@ -339,12 +375,7 @@ button.active {
 }
 .casino-games-content .casino-card .real,
 .casino-games-content .casino-card .free {
-  position: relative;
-  bottom: 85px;
-  left: 25px;
   width: 70%;
-  margin: 2px 0;
-  border: none;
   background-color: #455377;
   color: #fff;
   border: none;
@@ -353,9 +384,20 @@ button.active {
   cursor: pointer;
 }
 .casino-games-content .casino-card .real {
+  margin: 0.7em 0;
   background-color: #f16442;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 .casino-games-content .casino-card .free {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   background-color: #346888;
 }
 .casino-games-content .casino-card .card-name {
@@ -368,6 +410,7 @@ button.active {
   color: #97999d;
   font-size: 12px;
   width: 40%;
+  margin-right: 1em;
 }
 .right-container .league-content {
   background-color: #2e364e;
@@ -406,6 +449,9 @@ button.active {
   border-radius: 4px;
   border: none;
 }
+.right-container .btn-season:hover {
+  background-color: #f16442;
+}
 .right-container .fixture-list-view-header {
   display: flex;
 }
@@ -419,6 +465,7 @@ button.active {
 
 #rightSidebar {
   width: 13%;
+  margin: 0 0.5em;
 }
 #rightSidebar .closebtn .fa-xmark {
   display: none;
@@ -427,14 +474,11 @@ button.active {
 }
 
 .bet-slip {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
   font-size: 14px;
   color: #000;
-  background-color: #dbe6f2;
-  padding: 5px;
 }
 .bet-slip .bet-slip-content {
+  background-color: #dbe6f2;
   font-size: 12px;
 }
 .bet-slip .bet-slip-content .bet-slip-tabs a {
@@ -446,8 +490,10 @@ button.active {
   color: #000;
 }
 .bet-slip .bet-slip-content .coupon {
+  display: flex;
+  justify-content: space-between;
   border-radius: 6px;
-  margin: 10px 0;
+  margin: 10px 6px;
   padding: 10px;
   background-color: #fff;
 }
@@ -468,10 +514,15 @@ button.active {
 }
 .bet-slip .bet-slip-content .coupon .btg-name {
   color: #97999d;
+  margin: 0.4em 0;
 }
 .bet-slip .bet-slip-content .coupon .match-rate {
   color: #ed6445;
   font-weight: bold;
+}
+.bet-slip .bet-slip-content .coupon-amount {
+  background-color: #dbe6f2;
+  padding: 0 3px;
 }
 .bet-slip .bet-slip-content .coupon-amount input {
   cursor: pointer;
@@ -482,11 +533,14 @@ button.active {
 }
 .bet-slip .coupon-footer {
   background-color: #fff;
-  padding: 2px;
+  padding: 10px;
 }
 .bet-slip .coupon-footer .total-container {
   font-weight: bold;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.bet-slip .coupon-footer .total-container .total-rate {
+  margin: 0.3em 0 1em 0;
 }
 .bet-slip .coupon-footer .total-container .total-coupon-num,
 .bet-slip .coupon-footer .total-container .total-rate-num {
@@ -494,6 +548,9 @@ button.active {
 }
 .bet-slip .coupon-footer .check input {
   cursor: pointer;
+}
+.bet-slip .coupon-footer .check-group {
+  margin: 1em 0;
 }
 .bet-slip .coupon-footer .confirm-bet-btn,
 .bet-slip .coupon-footer .reserve-bet-btn {
@@ -525,6 +582,10 @@ button.active {
 }
 
 .bet-slip-header {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 10px;
+  background-color: #dbe6f2;
   display: flex;
   justify-content: space-between;
 }
@@ -532,11 +593,6 @@ button.active {
 .bet-slip-tabs {
   display: flex;
   justify-content: space-around;
-}
-
-.coupon {
-  display: flex;
-  justify-content: space-between;
 }
 
 .total-coupon {
