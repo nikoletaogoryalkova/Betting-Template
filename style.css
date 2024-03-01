@@ -112,6 +112,9 @@ body {
   background-color: #f16442;
   transition: all 0.3s ease;
 }
+.bet-btn:hover span:last-child {
+  opacity: 1;
+}
 .bet-btn span {
   display: flex;
   justify-content: center;
@@ -538,11 +541,19 @@ button.active span:last-child {
 }
 .bet-slip .bet-slip-content .bet-slip-tabs a {
   color: #97999d;
+  position: relative;
 }
-.bet-slip .bet-slip-content .bet-slip-tabs a .tab a .active, .bet-slip .bet-slip-content .bet-slip-tabs a:hover {
-  border-bottom: 4px solid #ed6445;
-  opacity: 1;
+.bet-slip .bet-slip-content .bet-slip-tabs a:hover {
   color: #000;
+  border-bottom: 4px solid #ed6445;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.bet-slip .bet-slip-content .tab .active {
+  color: #000;
+  border-bottom: 4px solid #ed6445;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 .bet-slip .bet-slip-content .coupon {
   display: flex;

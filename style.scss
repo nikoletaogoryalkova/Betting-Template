@@ -105,7 +105,7 @@ body {
 
     .bet-btn-group {
         height: 50px;
-        
+
         .bet-btn:nth-of-type(1) {
             width: 35%;
         }
@@ -118,7 +118,7 @@ body {
             width: 35%;
         }
     }
-    
+
 }
 
 .bet-btn {
@@ -131,14 +131,20 @@ body {
     padding: 10px;
     cursor: pointer;
     margin: 0 2px;
-    
+
     &:hover {
         background-color: $bet-btn-bg-color-hover;
         transition: all 0.3s ease;
+
+        span:last-child {
+            opacity: 1;
+        }
     }
-    span{
+
+    span {
         display: flex;
         justify-content: center;
+
         &:last-child {
             font-size: 10px;
             opacity: 0.5;
@@ -148,6 +154,7 @@ body {
 
 button.active {
     background-color: $bet-btn-bg-color-active;
+
     span:last-child {
         opacity: 1;
     }
@@ -603,7 +610,7 @@ button.active {
     .fixture-list-view-header {
         display: flex;
         justify-content: space-between;
-     
+
     }
 
     .other-btn {
@@ -637,14 +644,21 @@ button.active {
 
         .bet-slip-tabs a {
             color: $text-color-gray;
-            // opacity: 0.3;
+            position: relative;
 
-            .tab a .active,
             &:hover {
-                border-bottom: 4px solid #ed6445;
-                opacity: 1;
                 color: $text-color-black;
+                border-bottom: 4px solid #ed6445;
+                border-bottom-right-radius: 3px;
+                border-bottom-left-radius: 3px;
             }
+        }
+
+        .tab .active {
+            color: $text-color-black;
+            border-bottom: 4px solid #ed6445;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
         }
 
         .coupon {
