@@ -88,7 +88,7 @@ body {
 // --------------- Left Sidebar Begin --------------- //
 
 .left-sidebar {
-    width: 13%;
+    // width: 12%;
 
     .closebtn {
         background-color: #252c3c;
@@ -309,12 +309,12 @@ body {
 // ---------------  Main Container Begin --------------- //
 .main-container {
     display: flex;
-    width: 75%;
+    width: 70%;
 
     // --------------- Left Container Begin --------------- //
 
     .left-container {
-        width: 60%;
+        width: 88%;
         margin: 0 15px;
         white-space: nowrap;
         overflow: hidden;
@@ -692,10 +692,9 @@ body {
 // --------------- Right Container Begin --------------- //
 
 .right-container {
+    width: 45%;
     color: $text-color-gray;
     font-size: 12px;
-    width: 40%;
-    margin-right: 1em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -780,9 +779,8 @@ body {
 
 // --------------- Right Sidebar Begin --------------- //
 .right-sidebar {
-    width: 13%;
-    margin: 0 0.5em;
-
+    width: 14%;
+    margin-left: 0.8em;
     .closebtn .fa-xmark {
         display: none;
         font-size: 20px;
@@ -912,6 +910,7 @@ body {
                     width: 100%;
                     margin-bottom: 10px;
                 }
+
                 input[type="number"]::placeholder {
                     border-radius: 10px;
                 }
@@ -1013,39 +1012,71 @@ body {
         }
     }
 
-
     .numbers-cont {
         display: grid;
-        grid-template-columns: repeat(4, fr);
-        grid-gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto auto auto;
+        gap: 5px;
         margin-top: 5px;
+        // width: 300px; /* Adjust width as needed */
+        // height: 400px; /* Adjust height as needed */
+    }
 
-        .item {
-            cursor: pointer;
-            color: $text-color-white;
-            background-color: #222b42;
-            border-radius: 4px;
-            border: none;
-            padding: 10px 20px;
+    .item {
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        color: $text-color-white;
+        background-color: #222b42;
+        border-radius: 4px;
+        border: none;
+        padding: 5px;
+    }
 
-        }
+    .item.zero {
+        grid-column: span 2;
+    }
 
-        .backspace {
-            background-color: #346886;
-            grid-area: 1 / 5 / 3 / 4;
-            padding: 20px;
-        }
+    .backspace {
+      //  justify-self: center;
+      grid-area: 1 / 5 / 3 / 6;
+        background-color: #346886;
+    }
 
-        .enter {
-            background-color: #346886;
-            grid-area: 3 / 5 / 5 / 4;
-            padding: 20px;
-        }
+    .enter {
+        grid-area: 3 / 5 / 6 / 6;
+        background-color: #346886;
+
+        // .numbers-cont {
+        //     display: grid;
+        //     grid-template-columns: repeat(3, 1fr);
+        //     grid-gap: 5px;
+        //     margin-top: 5px;
+
+        //     .item {
+        //         cursor: pointer;
+        //         color: $text-color-white;
+        //         background-color: #222b42;
+        //         border-radius: 4px;
+        //         border: none;
+        //         padding: 10px 20px;
+        //     }
+
+        //     .backspace {
+        //         background-color: #346886;
+        //         padding: 20px;
+        //     }
+
+        //     .enter {
+        //         background-color: #346886;
+        //         grid-area: 3 / 5 / 3 / 5;
+        //         padding: 20px;
+        //     }
 
         //     .zero {
-        //        padding: 10px 45px;
-        //       width: 100%;
-        //    }
+        //         // grid-column: span 2;
+
+        //     }
     }
 
     // --------------- Coupon Check End --------------- //

@@ -63,9 +63,6 @@ body {
   opacity: 1;
 }
 
-.left-sidebar {
-  width: 13%;
-}
 .left-sidebar .closebtn {
   background-color: #252c3c;
 }
@@ -217,10 +214,10 @@ body {
 
 .main-container {
   display: flex;
-  width: 75%;
+  width: 70%;
 }
 .main-container .left-container {
-  width: 60%;
+  width: 88%;
   margin: 0 15px;
   white-space: nowrap;
   overflow: hidden;
@@ -512,10 +509,9 @@ body {
 }
 
 .right-container {
+  width: 45%;
   color: #97999d;
   font-size: 12px;
-  width: 40%;
-  margin-right: 1em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -579,8 +575,8 @@ body {
 }
 
 .right-sidebar {
-  width: 13%;
-  margin: 0 0.5em;
+  width: 14%;
+  margin-left: 0.8em;
 }
 .right-sidebar .closebtn .fa-xmark {
   display: none;
@@ -768,25 +764,29 @@ body {
 }
 .right-sidebar .numbers-cont {
   display: grid;
-  grid-template-columns: repeat(4, fr);
-  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto auto;
+  gap: 5px;
   margin-top: 5px;
 }
-.right-sidebar .numbers-cont .item {
+.right-sidebar .item {
+  display: grid;
+  place-items: center;
   cursor: pointer;
   color: #fff;
   background-color: #222b42;
   border-radius: 4px;
   border: none;
-  padding: 10px 20px;
+  padding: 5px;
 }
-.right-sidebar .numbers-cont .backspace {
-  background-color: #346886;
-  grid-area: 1/5/3/4;
-  padding: 20px;
+.right-sidebar .item.zero {
+  grid-column: span 2;
 }
-.right-sidebar .numbers-cont .enter {
+.right-sidebar .backspace {
+  grid-area: 1/5/3/6;
   background-color: #346886;
-  grid-area: 3/5/5/4;
-  padding: 20px;
+}
+.right-sidebar .enter {
+  grid-area: 3/5/6/6;
+  background-color: #346886;
 }/*# sourceMappingURL=style.css.map */
