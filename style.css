@@ -42,6 +42,12 @@ body {
   font-size: 20px;
 }
 
+.live-menu-container .m1-list .active a {
+  color: #fff;
+}
+.live-menu-container .m1-list .active a .fa-chevron-right:before {
+  content: "\f078";
+}
 .live-menu-container ul a {
   cursor: pointer;
   display: flex;
@@ -52,8 +58,10 @@ body {
   font-size: 14px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+.live-menu-container ul a:last-child {
+  border-bottom: none;
+}
 .live-menu-container ul a:hover {
-  background-color: #36405b;
   color: #fff;
 }
 .live-menu-container .m1-item a.m1-link:first-child {
@@ -223,6 +231,7 @@ button.active span:last-child {
 }
 
 .today-events-content {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -231,10 +240,31 @@ button.active span:last-child {
   background-color: #2b3750;
   padding: 4px;
 }
+.today-events-content::-webkit-scrollbar-thumb {
+  height: 5px;
+  background: #485475;
+  border-radius: 6px;
+}
+.today-events-content::-webkit-scrollbar {
+  height: 5px;
+  cursor: pointer;
+  background: #b1b5b8;
+  border-radius: 6px;
+}
+.today-events-content::-webkit-scrollbar:active {
+  background: #383b3d;
+}
 .today-events-content .event-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   margin: 5px;
   margin: auto;
   margin-right: 0.7em;
+  width: 100%;
+  padding: 5px;
   cursor: pointer;
   color: #97999d;
   background-color: #373f5d;
@@ -311,7 +341,11 @@ button.active span:last-child {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin: 1em 0;
   display: flex;
+  flex-direction: row;
   align-items: center;
+}
+.upcoming-events-content .upcoming-fixture-body:last-child {
+  border-bottom: none;
 }
 .upcoming-events-content .upcoming-fixture-body .item:nth-of-type(2) {
   width: 25%;
@@ -330,7 +364,7 @@ button.active span:last-child {
   width: 9%;
 }
 .upcoming-events-content .upcoming-fixture-body .item {
-  margin: 0 0.4em;
+  margin: 0.5em;
 }
 .upcoming-events-content .upcoming-fixture-body .time {
   color: #378fcc;
@@ -351,9 +385,6 @@ button.active span:last-child {
   border-top-left-radius: 6px;
   border-bottom-right-radius: 6px;
   font-size: 12px;
-}
-.upcoming-events-content .upcoming-fixture-body .bet-btn {
-  margin-bottom: 0.5em;
 }
 .upcoming-events-content .upcoming-fixture-body .fa-chart-simple {
   font-size: 15px;
@@ -410,20 +441,39 @@ button.active span:last-child {
   overflow-x: auto;
   overflow-y: hidden;
 }
+.casino-games-content::-webkit-scrollbar-thumb {
+  height: 5px;
+  background: #485475;
+  border-radius: 6px;
+}
+.casino-games-content::-webkit-scrollbar {
+  height: 5px;
+  cursor: pointer;
+  background: #b1b5b8;
+  border-radius: 6px;
+}
+.casino-games-content::-webkit-scrollbar:active {
+  background: #383b3d;
+}
 .casino-games-content .casino-card {
   position: relative;
 }
-.casino-games-content .casino-card .card-img {
-  height: 11vh;
-}
 .casino-games-content .casino-card .card-img img {
-  width: 15vh;
+  width: 16vh;
   margin: 0 5px;
   border-radius: 10px;
 }
+.casino-games-content .casino-card .card-img img:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+.casino-games-content .casino-card .card-img img:hover .real,
+.casino-games-content .casino-card .card-img img:hover .free {
+  display: block;
+}
 .casino-games-content .casino-card .game-info {
   position: relative;
-  bottom: 93px;
+  bottom: 100px;
   left: 10px;
   background-color: #378fcc;
   border-radius: 4px;
@@ -432,35 +482,33 @@ button.active span:last-child {
 }
 .casino-games-content .casino-card .real,
 .casino-games-content .casino-card .free {
-  width: 70%;
+  display: none;
   background-color: #455377;
   color: #fff;
   border: none;
   border-radius: 6px;
-  padding: 5px 5px;
+  font-size: 12px;
+  padding: 0 45px;
   cursor: pointer;
 }
 .casino-games-content .casino-card .real {
-  margin: 0.7em 0;
+  margin: 0.3em 0;
   background-color: #f16442;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
 }
 .casino-games-content .casino-card .free {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   background-color: #346888;
 }
 .casino-games-content .casino-card .card-name {
   font-size: 12px;
   text-align: center;
   color: #97999d;
+}
+.casino-games-content .casino-card .card-hover {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 .right-container {
@@ -475,6 +523,9 @@ button.active span:last-child {
 .right-container .league-content .fixture-list-view li {
   padding: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.right-container .league-content .fixture-list-view li:last-child {
+  border-bottom: none;
 }
 .right-container .league-header {
   height: 13vh;
@@ -515,6 +566,8 @@ button.active span:last-child {
 }
 .right-container .other-btn {
   cursor: pointer;
+  padding: 15px 10px;
+  margin-bottom: 0.4em;
   background-color: #455377;
   color: #fff;
   border-radius: 4px;

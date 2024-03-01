@@ -54,6 +54,13 @@ body {
 }
 
 .live-menu-container {
+    .m1-list .active a {
+        color: $text-color-white;
+
+        .fa-chevron-right:before {
+            content: "\f078";
+        }
+    }
 
     ul a {
         cursor: pointer;
@@ -65,8 +72,11 @@ body {
         font-size: 14px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
+        &:last-child {
+            border-bottom: none;
+        }
+
         &:hover {
-            background-color: #36405b;
             color: $text-color-white;
         }
     }
@@ -87,6 +97,8 @@ body {
     padding: 10px;
     font-size: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+
 
     .time,
     .market-name {
@@ -120,6 +132,8 @@ body {
     }
 
 }
+
+
 
 .bet-btn {
     width: 100%;
@@ -257,8 +271,8 @@ button.active {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
-
 .today-events-content {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -266,13 +280,35 @@ button.active {
     overflow-y: hidden;
     background-color: #2b3750;
     padding: 4px;
-
+    
+    &::-webkit-scrollbar-thumb{
+        height: 5px;
+        background: #485475;
+        border-radius: 6px;
+    }
+    &::-webkit-scrollbar {
+        height: 5px;
+        cursor: pointer;
+        background: #b1b5b8;
+        border-radius: 6px;
+        &:active {
+            background: #383b3d;
+        }
+    }
+    
 
 
     .event-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
         margin: 5px;
         margin: auto;
         margin-right: 0.7em;
+        width: 100%;
+        padding: 5px;
 
         .icon {
             font-size: 25px;
@@ -366,8 +402,13 @@ button.active {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         margin: 1em 0;
         display: flex;
-        // flex-direction: row;
+        flex-direction: row;
         align-items: center;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
 
         .item:nth-of-type(2) {
             width: 25%;
@@ -390,7 +431,7 @@ button.active {
         }
 
         .item {
-            margin: 0 0.4em;
+            margin: 0.5em;
 
         }
 
@@ -419,9 +460,9 @@ button.active {
             font-size: 12px;
         }
 
-        .bet-btn {
-            margin-bottom: 0.5em;
-        }
+        // .bet-btn {
+        //     margin-bottom: 0.5em;
+        // }
 
         .fa-chart-simple {
             font-size: 15px;
@@ -487,26 +528,48 @@ button.active {
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
+    &::-webkit-scrollbar-thumb{
+        height: 5px;
+        background: #485475;
+        border-radius: 6px;
+    }
+    &::-webkit-scrollbar {
+        height: 5px;
+        cursor: pointer;
+        background: #b1b5b8;
+        border-radius: 6px;
+        &:active {
+            background: #383b3d;
+        }
+    }
 
     .casino-card {
         position: relative;
+       
 
         .card-img {
-            height: 11vh;
-
-            img {
-                width: 15vh;
-                margin: 0 5px;
-                border-radius: 10px;
+          //  height: 11vh;
+        // 
+          
+          img {
+              width: 16vh;
+              margin: 0 5px;
+              border-radius: 10px;
+              &:hover {
+                    background-color: rgba(0, 0, 0, 0.4);
+                    transition: all 0.3s ease;
+                   
+                    .real,
+                    .free {
+                        display: block;
+                    }
+                }
             }
-
         }
-
-
 
         .game-info {
             position: relative;
-            bottom: 93px;
+            bottom: 100px;
             left: 10px;
             background-color: #378fcc;
             border-radius: 4px;
@@ -516,33 +579,23 @@ button.active {
 
         .real,
         .free {
-            // display: none;
-            width: 70%;
+            display: none;
             background-color: $bet-btn-base-bg-color;
             color: $text-color-white;
             border: none;
             border-radius: 6px;
-            padding: 5px 5px;
+            font-size: 12px;
+            padding: 0 45px;
             cursor: pointer;
         }
 
         .real {
 
-            margin: 0.7em 0;
+            margin: 0.3em 0;
             background-color: $bet-btn-bg-color-selected;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
         }
 
         .free {
-            position: absolute;
-            top: 35%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
             background-color: #346888;
         }
 
@@ -550,6 +603,14 @@ button.active {
             font-size: 12px;
             text-align: center;
             color: $text-color-gray;
+        }
+        .card-hover {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            
         }
     }
 }
@@ -566,6 +627,10 @@ button.active {
         .fixture-list-view li {
             padding: 10px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+            &:last-child {
+                border-bottom: none;
+            }
         }
     }
 
@@ -615,6 +680,8 @@ button.active {
 
     .other-btn {
         cursor: pointer;
+        padding: 15px 10px;
+        margin-bottom: 0.4em;
         background-color: $bet-btn-base-bg-color;
         color: $text-color-white;
         border-radius: 4px;
