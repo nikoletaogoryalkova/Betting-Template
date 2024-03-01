@@ -12,20 +12,20 @@ header {
         border: none;
         background-color: $header-bg-color;
 
-        .closebtn .fa-solid {
-            display: none;
-            font-size: 20px;
-            color: $text-color-white;
-        }
     }
-
+    
     .logo {
         margin: 10px;
-
+        
         img {
             width: 80px;
         }
     }
+}
+.closebtn .fa-solid {
+    display: none;
+    font-size: 20px;
+    color: $text-color-white;
 }
 
 body {
@@ -53,7 +53,11 @@ body {
     }
 }
 
+
 .live-menu-container {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     .m1-list .active a {
         color: $text-color-white;
 
@@ -61,11 +65,13 @@ body {
             content: "\f078";
         }
     }
+    
 
     ul a {
         cursor: pointer;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         background-color: #36405b;
         padding: 10px 10px;
         color: $text-color-gray;
@@ -85,10 +91,20 @@ body {
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
     }
+
+    .m2-link-left {
+        display: flex;
+        align-items: center;
+
+        .text {
+            margin-left: 0.5em;
+        }
+    }
 }
 
 .team-infos {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 6px;
 }
 
@@ -97,7 +113,7 @@ body {
     padding: 10px;
     font-size: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
+   
 
 
     .time,
@@ -145,6 +161,9 @@ body {
     padding: 10px;
     cursor: pointer;
     margin: 0 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &:hover {
         background-color: $bet-btn-bg-color-hover;
@@ -177,7 +196,12 @@ button.active {
 
 
 .tabs-container {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 
     .tab-item,
     .live:hover {
@@ -193,6 +217,7 @@ button.active {
         background-color: #252b3c;
         color: $text-color-gray;
         border: none;
+        margin-left: 2em;
     }
 }
 
@@ -230,8 +255,34 @@ button.active {
     }
 
     .range-numbers {
-        font-size: 12px;
-        margin: 10px;
+        margin-top: 1em;
+        font-size: 11px;
+        display: flex;
+        justify-content: space-between;
+        // .range-number:nth-of-type(1) {
+        //     padding-right: 1.4em;
+        // }
+        // .range-number:nth-of-type(2) {
+        //     padding-right: 1.5em;
+        // }
+        // .range-number:nth-of-type(3) {
+        //     padding-right: 1.4em;
+        // }
+        // .range-number:nth-of-type(4) {
+        //     padding-right: 1.9em;
+        // }
+        // .range-number:nth-of-type(5) {
+        //     padding-right: 1.4em;
+        // }
+        // .range-number:nth-of-type(6) {
+        //     padding-right: 1em;
+        // }
+        // .range-number:nth-of-type(7) {
+        //     padding-right: 1em;
+        // }
+        // .range-number:nth-of-type(8) {
+        //     padding-right: 1em;
+        // }
     }
 }
 
@@ -271,6 +322,7 @@ button.active {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
+
 .today-events-content {
     cursor: pointer;
     display: flex;
@@ -280,22 +332,24 @@ button.active {
     overflow-y: hidden;
     background-color: #2b3750;
     padding: 4px;
-    
-    &::-webkit-scrollbar-thumb{
+
+    &::-webkit-scrollbar-thumb {
         height: 5px;
         background: #485475;
         border-radius: 6px;
     }
+
     &::-webkit-scrollbar {
         height: 5px;
         cursor: pointer;
         background: #b1b5b8;
         border-radius: 6px;
+
         &:active {
             background: #383b3d;
         }
     }
-    
+
 
 
     .event-item {
@@ -303,23 +357,26 @@ button.active {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        text-align: center;
-        margin: 5px;
-        margin: auto;
         margin-right: 0.7em;
-        width: 100%;
-        padding: 5px;
-
-        .icon {
-            font-size: 25px;
-        }
-
+        padding: 0 36px;
         cursor: pointer;
         color: $text-color-gray;
         background-color: #373f5d;
         border-radius: 5px;
-        font-size: 12px;
+        font-size: 13px;
         text-align: center;
+        height: 70px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+
+        .icon {
+            font-size: 25px;
+            margin-bottom: 0.3em;
+        }
+
 
         &:hover,
         &.active {
@@ -327,9 +384,10 @@ button.active {
         }
 
         .count {
+            // display: none;
             position: relative;
-            left: 20px;
-            bottom: 35px;
+            left: 29px;
+            bottom: 47px;
             font-size: 10px;
             background-color: #47537a;
             border-radius: 50%;
@@ -483,6 +541,9 @@ button.active {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: space-between;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     .item:nth-of-type(2) {
         width: 25%;
@@ -528,16 +589,19 @@ button.active {
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    &::-webkit-scrollbar-thumb{
+
+    &::-webkit-scrollbar-thumb {
         height: 5px;
         background: #485475;
         border-radius: 6px;
     }
+
     &::-webkit-scrollbar {
         height: 5px;
         cursor: pointer;
         background: #b1b5b8;
         border-radius: 6px;
+
         &:active {
             background: #383b3d;
         }
@@ -545,20 +609,21 @@ button.active {
 
     .casino-card {
         position: relative;
-       
+
 
         .card-img {
-          //  height: 11vh;
-        // 
-          
-          img {
-              width: 16vh;
-              margin: 0 5px;
-              border-radius: 10px;
-              &:hover {
+            //  height: 11vh;
+            // 
+
+            img {
+                width: 16vh;
+                margin: 0 5px;
+                border-radius: 10px;
+
+                &:hover {
                     background-color: rgba(0, 0, 0, 0.4);
                     transition: all 0.3s ease;
-                   
+
                     .real,
                     .free {
                         display: block;
@@ -569,7 +634,7 @@ button.active {
 
         .game-info {
             position: relative;
-            bottom: 100px;
+            bottom: 80px;
             left: 10px;
             background-color: #378fcc;
             border-radius: 4px;
@@ -604,13 +669,14 @@ button.active {
             text-align: center;
             color: $text-color-gray;
         }
+
         .card-hover {
             position: absolute;
             top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
-            
+
         }
     }
 }
@@ -620,9 +686,21 @@ button.active {
     font-size: 12px;
     width: 40%;
     margin-right: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     .league-content {
         background-color: #2e364e;
+
+        .fixture-list-view-header {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+
+
+        }
+
 
         .fixture-list-view li {
             padding: 10px;
@@ -666,17 +744,9 @@ button.active {
         color: $text-color-white;
         border-radius: 4px;
         border: none;
-
-        &:hover {
-            background-color: $bet-btn-bg-color-hover;
-        }
     }
 
-    .fixture-list-view-header {
-        display: flex;
-        justify-content: space-between;
 
-    }
 
     .other-btn {
         cursor: pointer;
@@ -708,6 +778,9 @@ button.active {
     .bet-slip-content {
         background-color: #dbe6f2;
         font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         .bet-slip-tabs a {
             color: $text-color-gray;
@@ -735,6 +808,9 @@ button.active {
             margin: 10px 6px;
             padding: 10px;
             background-color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
             .match-check .fa-circle-check {
                 color: #b0b3b0;
