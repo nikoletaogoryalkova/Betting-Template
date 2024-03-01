@@ -11,6 +11,7 @@ header {
         display: none;
         border: none;
         background-color: $header-bg-color;
+        color: $text-color-white;
 
     }
 
@@ -1036,70 +1037,117 @@ body {
 
     .numbers-cont {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto auto auto auto;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr); 
         gap: 5px;
         margin-top: 5px;
-        // width: 300px; /* Adjust width as needed */
-        // height: 400px; /* Adjust height as needed */
+        
     }
-
+     
     .item {
         display: grid;
         place-items: center;
         cursor: pointer;
-        color: $text-color-white;
+        color: white;
         background-color: #222b42;
         border-radius: 4px;
         border: none;
-        padding: 5px;
+        padding: 10px 20px;
+        font-size: 12px;
+        font-weight: bold;
     }
-
-    .item.zero {
+     
+    .zero {
         grid-column: span 2;
     }
-
-    .backspace {
-        //  justify-self: center;
-        grid-area: 1 / 5 / 3 / 6;
-        background-color: #346886;
-    }
-
+     
+     
+    .backspace, 
     .enter {
-        grid-area: 3 / 5 / 6 / 6;
-        background-color: #346886;
-
-        // .numbers-cont {
-        //     display: grid;
-        //     grid-template-columns: repeat(3, 1fr);
-        //     grid-gap: 5px;
-        //     margin-top: 5px;
-
-        //     .item {
-        //         cursor: pointer;
-        //         color: $text-color-white;
-        //         background-color: #222b42;
-        //         border-radius: 4px;
-        //         border: none;
-        //         padding: 10px 20px;
-        //     }
-
-        //     .backspace {
-        //         background-color: #346886;
-        //         padding: 20px;
-        //     }
-
-        //     .enter {
-        //         background-color: #346886;
-        //         grid-area: 3 / 5 / 3 / 5;
-        //         padding: 20px;
-        //     }
-
-        //     .zero {
-        //         // grid-column: span 2;
-
-        //     }
+        grid-column: 4;
     }
+     
+    .backspace {
+        grid-row: 1 / span 2;
+        background-color: #346886;
+    }
+     
+    .enter {
+        grid-row: 3 / span 2; 
+        background-color: #346886;
+    } 
+     
+    .item:nth-child(4),
+    .item:nth-child(7) {
+        grid-column: 1;
+      }
+
+    // .numbers-cont {
+    //     display: grid;
+    //     grid-template-columns: repeat(3, 1fr);
+    //     grid-template-rows: auto auto auto auto;
+    //     gap: 5px;
+    //     margin-top: 5px;
+    //     // width: 300px; /* Adjust width as needed */
+    //     // height: 400px; /* Adjust height as needed */
+    // }
+
+    // .item {
+    //     display: grid;
+    //     place-items: center;
+    //     cursor: pointer;
+    //     color: $text-color-white;
+    //     background-color: #222b42;
+    //     border-radius: 4px;
+    //     border: none;
+    //     padding: 5px;
+    // }
+
+    // .item.zero {
+    //     grid-column: span 2;
+    // }
+
+    // .backspace {
+    //     //  justify-self: center;
+    //     grid-area: 1 / 5 / 3 / 6;
+    //     background-color: #346886;
+    // }
+
+    // .enter {
+    //     grid-area: 3 / 5 / 6 / 6;
+    //     background-color: #346886;
+
+    //     // .numbers-cont {
+    //     //     display: grid;
+    //     //     grid-template-columns: repeat(3, 1fr);
+    //     //     grid-gap: 5px;
+    //     //     margin-top: 5px;
+
+    //     //     .item {
+    //     //         cursor: pointer;
+    //     //         color: $text-color-white;
+    //     //         background-color: #222b42;
+    //     //         border-radius: 4px;
+    //     //         border: none;
+    //     //         padding: 10px 20px;
+    //     //     }
+
+    //     //     .backspace {
+    //     //         background-color: #346886;
+    //     //         padding: 20px;
+    //     //     }
+
+    //     //     .enter {
+    //     //         background-color: #346886;
+    //     //         grid-area: 3 / 5 / 3 / 5;
+    //     //         padding: 20px;
+    //     //     }
+
+    //     //     .zero {
+    //     //         // grid-column: span 2;
+
+    //     //     }
+    // }
 
     // --------------- Coupon Check End --------------- //
 }
@@ -1108,7 +1156,32 @@ body {
 
 // --------------- Mobile View --------------- //
 
-@media screen and (max-width: $small-screen) {}
+@media screen and (max-width: $small-screen) {
+    header {
+        justify-content: space-between;
+        button {
+            display: block;
+        }
+    }
+    .content {
+        margin: 0.5em;
+    }
+    .left-sidebar, .right-sidebar  {
+        display: none;
+        margin: 0;
+    }
+    .main-container {
+        width: 100%;
+        display: block;
+        .upcoming-fixture-body {
+           
+            .live, i, .item:last-child{
+                display: none;
+            }
+        }
+       
+    }
+}
 // --------------- Tablet View --------------- //
 @media screen and (min-width: $medium-screen) and (max-width: $large-screen) {}
 // --------------- Desktop View --------------- //
