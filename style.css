@@ -63,6 +63,9 @@ body {
   opacity: 1;
 }
 
+.left-sidebar {
+  width: 12%;
+}
 .left-sidebar .closebtn {
   background-color: #252c3c;
 }
@@ -214,10 +217,10 @@ body {
 
 .main-container {
   display: flex;
-  width: 70%;
+  width: 73%;
 }
 .main-container .left-container {
-  width: 88%;
+  width: 94%;
   margin: 0 15px;
   white-space: nowrap;
   overflow: hidden;
@@ -304,6 +307,9 @@ body {
   text-decoration: none;
   cursor: pointer;
   font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main-container .left-container .upcoming-events-header .upcoming-tabs .tab {
   margin: 0 10px;
@@ -314,6 +320,14 @@ body {
 .main-container .left-container .upcoming-events-header .upcoming-tabs .tab .fa-solid {
   color: gray;
 }
+.main-container .left-container .upcoming-events-header .upcoming-tabs .tab-text {
+  display: none;
+}
+.main-container .left-container .upcoming-events-header .upcoming-tabs .active .tab-text {
+  margin: 0 0.2em;
+  display: block;
+  font-size: 14px;
+}
 .main-container .left-container .upcoming-events-header .upcoming-tabs .active,
 .main-container .left-container .upcoming-events-header .upcoming-tabs .tab a:hover {
   padding: 0.5em;
@@ -323,13 +337,16 @@ body {
   border-radius: 4px;
   border-top: 2px solid #efc760;
 }
-.main-container .left-container .upcoming-events-header .upcoming-tabs .tab-text {
-  display: none;
-}
-.main-container .left-container .upcoming-events-header .upcoming-tabs .active .tab-text {
+.main-container .left-container .upcoming-events-header .upcoming-tabs .active .tab-text,
+.main-container .left-container .upcoming-events-header .upcoming-tabs .tab a:hover .tab-text {
   margin: 0 0.2em;
   display: block;
   font-size: 14px;
+  color: #fff;
+}
+.main-container .left-container .upcoming-events-header .upcoming-tabs .active .fa-solid,
+.main-container .left-container .upcoming-events-header .upcoming-tabs .tab a:hover .fa-solid {
+  color: #fff;
 }
 .main-container .left-container .upcoming-events-content {
   border-bottom-left-radius: 6px;
@@ -344,6 +361,9 @@ body {
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin: 1em 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main-container .left-container .upcoming-events-content .upcoming-fixture-body:last-child {
   border-bottom: none;
@@ -366,6 +386,9 @@ body {
 }
 .main-container .left-container .upcoming-events-content .upcoming-fixture-body .item {
   margin: 0.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main-container .left-container .upcoming-events-content .upcoming-fixture-body .time {
   color: #378fcc;
@@ -509,7 +532,7 @@ body {
 }
 
 .right-container {
-  width: 45%;
+  width: 37%;
   color: #97999d;
   font-size: 12px;
   white-space: nowrap;
@@ -575,7 +598,7 @@ body {
 }
 
 .right-sidebar {
-  width: 14%;
+  width: 15%;
   margin-left: 0.8em;
 }
 .right-sidebar .closebtn .fa-xmark {

@@ -88,7 +88,7 @@ body {
 // --------------- Left Sidebar Begin --------------- //
 
 .left-sidebar {
-    // width: 12%;
+    width: 12%;
 
     .closebtn {
         background-color: #252c3c;
@@ -309,12 +309,12 @@ body {
 // ---------------  Main Container Begin --------------- //
 .main-container {
     display: flex;
-    width: 70%;
+    width: 73%;
 
     // --------------- Left Container Begin --------------- //
 
     .left-container {
-        width: 88%;
+        width: 94%;
         margin: 0 15px;
         white-space: nowrap;
         overflow: hidden;
@@ -415,15 +415,18 @@ body {
             display: flex;
             justify-content: space-between;
 
+
             .upcoming-tabs {
                 display: flex;
                 text-decoration: none;
                 cursor: pointer;
                 font-size: 14px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
 
                 .tab {
                     margin: 0 10px;
-
                 }
 
                 .tab .active .fa-solid {
@@ -432,16 +435,6 @@ body {
 
                 .tab .fa-solid {
                     color: gray;
-                }
-
-                .active,
-                .tab a:hover {
-                    padding: 0.5em;
-                    display: flex;
-                    background-color: #2c354c;
-                    color: $text-color-white;
-                    border-radius: 4px;
-                    border-top: 2px solid #efc760;
                 }
 
                 .tab-text {
@@ -453,6 +446,29 @@ body {
                     display: block;
                     font-size: 14px;
                 }
+
+                .active,
+                .tab a:hover {
+                    padding: 0.5em;
+                    display: flex;
+                    background-color: #2c354c;
+                    color: $text-color-white;
+                    border-radius: 4px;
+                    border-top: 2px solid #efc760;
+
+                    .tab-text {
+                        margin: 0 0.2em;
+                        display: block;
+                        font-size: 14px;
+                        color: $text-color-white;
+                    }
+
+                    .fa-solid {
+                        color: $text-color-white;
+                    }
+                }
+
+
             }
 
         }
@@ -470,11 +486,13 @@ body {
                 align-items: center;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
                 margin: 1em 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
 
                 &:last-child {
                     border-bottom: none;
                 }
-
 
                 .item:nth-of-type(2) {
                     width: 25%;
@@ -498,6 +516,9 @@ body {
 
                 .item {
                     margin: 0.5em;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
 
                 }
 
@@ -692,7 +713,7 @@ body {
 // --------------- Right Container Begin --------------- //
 
 .right-container {
-    width: 45%;
+    width: 37%;
     color: $text-color-gray;
     font-size: 12px;
     white-space: nowrap;
@@ -779,8 +800,9 @@ body {
 
 // --------------- Right Sidebar Begin --------------- //
 .right-sidebar {
-    width: 14%;
+    width: 15%;
     margin-left: 0.8em;
+
     .closebtn .fa-xmark {
         display: none;
         font-size: 20px;
@@ -1038,8 +1060,8 @@ body {
     }
 
     .backspace {
-      //  justify-self: center;
-      grid-area: 1 / 5 / 3 / 6;
+        //  justify-self: center;
+        grid-area: 1 / 5 / 3 / 6;
         background-color: #346886;
     }
 
@@ -1083,4 +1105,13 @@ body {
 }
 
 // --------------- Right Sidebar End --------------- //
+
+// --------------- Mobile View --------------- //
+
+@media screen and (max-width: $small-screen) {}
+// --------------- Tablet View --------------- //
+@media screen and (min-width: $medium-screen) and (max-width: $large-screen) {}
+// --------------- Desktop View --------------- //
+@media screen and (min-width: $large-screen) {}
+
 // --------------- Content End --------------- //

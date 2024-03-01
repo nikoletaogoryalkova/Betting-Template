@@ -1,7 +1,12 @@
-//Body Background Color
+//--------Background's Color --------//
 $body-bg-color: #252b3c;
+//Header Background Color
+$header-bg-color: #346884;
+//Sub-Header Background Color
+$sub-header-bg-color: #333a53;
 
-// Primary Bet Button Color
+
+//--------Primary Bet Button Color--------//
 $bet-btn-base-bg-color: #455377;
 // Primary Button Selected
 $bet-btn-bg-color-selected: #f16442;
@@ -9,27 +14,23 @@ $bet-btn-bg-color-selected: #f16442;
 $bet-btn-bg-color-hover: #f16442;
 // Primary Button Active
 $bet-btn-bg-color-active: #f16442;
-// Primary Button Inactive
-$bet-btn-bg-color-inactive: #455377;
 
-//Text Color
+
+//--------Text Color--------//
 $text-color-white: #fff;
 //Text Color
 $text-color-gray: #97999d;
 //Text Color Bet Slip
 $text-color-black: #000;
 
-//Labels and Live Events Colors
+//--------Labels and Live Events Colors--------//
 //Green
 $text-color-green: #3ebe56;
 //Red
 $text-color-red: #b2353c;
 
-//Header Background Color
-$header-bg-color: #346884;
-//Sub-Header Background Color
-$sub-header-bg-color: #333a53;
 
-//--------Border Radius --------
-//Border Radius
-$border-radius: 2px;
+//--------Mobile Screen--------//
+$small-screen: 480px;
+$medium-screen: 768px;
+$large-screen: 1024px;
