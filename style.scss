@@ -1,7 +1,7 @@
 @import "../styles/variables.scss";
 @import "../styles/mixins.scss";
 
-
+// --------------- Header Begin --------------- //
 header {
     background-color: $header-bg-color;
     display: flex;
@@ -13,20 +13,20 @@ header {
         background-color: $header-bg-color;
 
     }
-    
+
     .logo {
         margin: 10px;
-        
+
         img {
             width: 80px;
         }
     }
 }
-.closebtn .fa-solid {
-    display: none;
-    font-size: 20px;
-    color: $text-color-white;
-}
+
+
+// --------------- Header End --------------- //
+
+// --------------- Content Begin --------------- //
 
 body {
     color: $text-color-white;
@@ -36,121 +36,10 @@ body {
 
 .content {
     display: flex;
-    //   justify-content: space-between;
     margin: 0.8em;
 }
 
-.left-sidebar {
-    width: 13%;
-
-    .closebtn {
-        background-color: #252c3c;
-
-        .fa-solid {
-            color: $text-color-white;
-            font-size: 20px;
-        }
-    }
-}
-
-
-.live-menu-container {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    .m1-list .active a {
-        color: $text-color-white;
-
-        .fa-chevron-right:before {
-            content: "\f078";
-        }
-    }
-    
-
-    ul a {
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #36405b;
-        padding: 10px 10px;
-        color: $text-color-gray;
-        font-size: 14px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-        &:last-child {
-            border-bottom: none;
-        }
-
-        &:hover {
-            color: $text-color-white;
-        }
-    }
-
-    .m1-item a.m1-link:first-child {
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-    }
-
-    .m2-link-left {
-        display: flex;
-        align-items: center;
-
-        .text {
-            margin-left: 0.5em;
-        }
-    }
-}
-
-.team-infos {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.match-infos {
-    background-color: #2e364e;
-    padding: 10px;
-    font-size: 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-   
-
-
-    .time,
-    .market-name {
-        color: $text-color-gray;
-        margin: 5px 0;
-    }
-
-    .score {
-        color: $text-color-green;
-        font-weight: bold;
-    }
-
-    .fa-star {
-        color: #efc760;
-    }
-
-    .bet-btn-group {
-        height: 50px;
-
-        .bet-btn:nth-of-type(1) {
-            width: 35%;
-        }
-
-        .bet-btn:nth-of-type(2) {
-            width: 35%;
-        }
-
-        .bet-btn:nth-of-type(3) {
-            width: 35%;
-        }
-    }
-
-}
-
-
-
+// --------------- Bet Button Begin --------------- //
 .bet-btn {
     width: 100%;
     box-sizing: border-box;
@@ -185,7 +74,7 @@ body {
     }
 }
 
-button.active {
+.bet-btn.active {
     background-color: $bet-btn-bg-color-active;
 
     span:last-child {
@@ -193,280 +82,467 @@ button.active {
     }
 }
 
+// --------------- Bet Button End --------------- //
 
 
-.tabs-container {
-    display: flex;
-    flex-direction: row;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+// --------------- Left Sidebar Begin --------------- //
 
+.left-sidebar {
+    width: 13%;
 
-    .tab-item,
-    .live:hover {
-        cursor: pointer;
-        background-color: #3e4a6b;
-        color: $text-color-white;
-        border-radius: 30px;
-        padding: 16px 26px;
-        border: none;
-    }
+    .closebtn {
+        background-color: #252c3c;
 
-    .live {
-        background-color: #252b3c;
-        color: $text-color-gray;
-        border: none;
-        margin-left: 2em;
-    }
-}
-
-.range-container {
-    text-align: center;
-    margin: 15px 0;
-
-    /***** Track Styles *****/
-    /***** Chrome, Safari, Opera, and Edge Chromium *****/
-    /******** Firefox ********/
-    input[type="range"] {
-        width: 100%;
-        -webkit-appearance: none;
-        appearance: none;
-        background: #455476;
-        cursor: pointer;
-        height: 0.5rem;
-        border-top-left-radius: 6px;
-        border-bottom-left-radius: 6px;
-    }
-
-    /***** Thumb Styles *****/
-    /***** Chrome, Safari, Opera, and Edge Chromium *****/
-    /***** Firefox *****/
-    input[type="range"]::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        /* Override default look */
-        appearance: none;
-        /* Centers thumb on the track */
-        background-color: #f16442;
-        height: 1rem;
-        width: 1rem;
-        border-radius: 5px;
-        padding: 10px;
-    }
-
-    .range-numbers {
-        margin-top: 1em;
-        font-size: 11px;
-        display: flex;
-        justify-content: space-between;
-        // .range-number:nth-of-type(1) {
-        //     padding-right: 1.4em;
-        // }
-        // .range-number:nth-of-type(2) {
-        //     padding-right: 1.5em;
-        // }
-        // .range-number:nth-of-type(3) {
-        //     padding-right: 1.4em;
-        // }
-        // .range-number:nth-of-type(4) {
-        //     padding-right: 1.9em;
-        // }
-        // .range-number:nth-of-type(5) {
-        //     padding-right: 1.4em;
-        // }
-        // .range-number:nth-of-type(6) {
-        //     padding-right: 1em;
-        // }
-        // .range-number:nth-of-type(7) {
-        //     padding-right: 1em;
-        // }
-        // .range-number:nth-of-type(8) {
-        //     padding-right: 1em;
-        // }
-    }
-}
-
-.match {
-    display: flex;
-    justify-content: space-between;
-}
-
-.market-name {
-    text-align: center;
-}
-
-.time-score-infos {
-    display: flex;
-    justify-content: space-between;
-}
-
-.bet-btn-group {
-    display: flex;
-}
-
-.main-container {
-    display: flex;
-    // justify-content: space-between;
-    width: 75%;
-}
-
-.left-container {
-    width: 60%;
-    margin: 0 15px;
-}
-
-.today-events-header {
-    background-color: $sub-header-bg-color;
-    color: $text-color-gray;
-    padding: 10px;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-}
-
-.today-events-content {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    background-color: #2b3750;
-    padding: 4px;
-
-    &::-webkit-scrollbar-thumb {
-        height: 5px;
-        background: #485475;
-        border-radius: 6px;
-    }
-
-    &::-webkit-scrollbar {
-        height: 5px;
-        cursor: pointer;
-        background: #b1b5b8;
-        border-radius: 6px;
-
-        &:active {
-            background: #383b3d;
+        .fa-solid {
+            color: $text-color-white;
+            font-size: 20px;
+            display: none;
         }
     }
 
-
-
-    .event-item {
+    .tabs-container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-right: 0.7em;
-        padding: 0 36px;
-        cursor: pointer;
-        color: $text-color-gray;
-        background-color: #373f5d;
-        border-radius: 5px;
-        font-size: 13px;
-        text-align: center;
-        height: 70px;
-        width: 100%;
+        flex-direction: row;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
 
 
-        .icon {
-            font-size: 25px;
-            margin-bottom: 0.3em;
-        }
-
-
-        &:hover,
-        &.active {
+        .tab-item,
+        .live:hover {
+            cursor: pointer;
+            background-color: #3e4a6b;
             color: $text-color-white;
+            border-radius: 30px;
+            padding: 16px 26px;
+            border: none;
         }
 
-        .count {
-            // display: none;
-            position: relative;
-            left: 29px;
-            bottom: 47px;
-            font-size: 10px;
-            background-color: #47537a;
-            border-radius: 50%;
-            padding: 2px;
+        .live {
+            background-color: #252b3c;
+            color: $text-color-gray;
+            border: none;
+            margin-left: 2em;
         }
     }
 
+    .range-container {
+        text-align: center;
+        margin: 15px 0;
 
-}
+        //--- Thumb Styles --//
+        //--- Chrome, Safari, Firefox, Opera, and Edge Chromium ---//
 
-.upcoming-events-header {
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    margin-top: 15px;
-    background-color: #343c56;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-
-    .upcoming-tabs {
-        display: flex;
-        text-decoration: none;
-        cursor: pointer;
-        font-size: 14px;
-
-        .tab {
-            margin: 0 10px;
-
+        input[type="range"] {
+            width: 100%;
+            -webkit-appearance: none;
+            appearance: none;
+            background: #455476;
+            cursor: pointer;
+            height: 0.5rem;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
         }
 
-        .tab .active .fa-solid {
-            color: $text-color-white;
+        //--- Thumb Styles --//
+        //--- Chrome, Safari, Firefox, Opera, and Edge Chromium ---//
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            /* Override default look */
+            appearance: none;
+            /* Centers thumb on the track */
+            background-color: #f16442;
+            height: 1rem;
+            width: 1rem;
+            border-radius: 5px;
+            padding: 10px;
         }
 
-        .tab .fa-solid {
-            color: gray;
-        }
-
-        .active,
-        .tab a:hover {
-            padding: 0.5em;
+        .range-numbers {
+            margin-top: 1em;
+            font-size: 11px;
             display: flex;
-            background-color: #2c354c;
+            justify-content: space-between;
+            // .range-number:nth-of-type(1) {
+            //     padding-right: 1.4em;
+            // }
+            // .range-number:nth-of-type(2) {
+            //     padding-right: 1.5em;
+            // }
+            // .range-number:nth-of-type(3) {
+            //     padding-right: 1.4em;
+            // }
+            // .range-number:nth-of-type(4) {
+            //     padding-right: 1.9em;
+            // }
+            // .range-number:nth-of-type(5) {
+            //     padding-right: 1.4em;
+            // }
+            // .range-number:nth-of-type(6) {
+            //     padding-right: 1em;
+            // }
+            // .range-number:nth-of-type(7) {
+            //     padding-right: 1em;
+            // }
+            // .range-number:nth-of-type(8) {
+            //     padding-right: 1em;
+            // }
+        }
+    }
+
+    .live-menu-container {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        .m1-list .active a {
             color: $text-color-white;
-            border-radius: 4px;
-            border-top: 2px solid #efc760;
+
+            .fa-chevron-right:before {
+                content: "\f078";
+            }
         }
 
-        .tab-text {
-            display: none;
-        }
 
-        .active .tab-text {
-            margin: 0 0.2em;
-            display: block;
+        ul a {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #36405b;
+            padding: 10px 10px;
+            color: $text-color-gray;
             font-size: 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:hover {
+                color: $text-color-white;
+            }
         }
+
+        .m1-item a.m1-link:first-child {
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+
+        .m2-link-left {
+            display: flex;
+            align-items: center;
+
+            .text {
+                margin-left: 0.5em;
+            }
+        }
+    }
+
+    .team-infos {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .match-infos {
+        background-color: #2e364e;
+        padding: 10px;
+        font-size: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        .match {
+            display: flex;
+            justify-content: space-between;
+
+            .fa-star {
+                color: #efc760;
+            }
+
+        }
+
+        .time-score-infos {
+            display: flex;
+            justify-content: space-between;
+
+            .score {
+                color: $text-color-green;
+                font-weight: bold;
+            }
+        }
+
+        .market-name {
+            text-align: center;
+        }
+
+        .bet-btn-group {
+            height: 50px;
+            display: flex;
+
+
+            .bet-btn:nth-of-type(1) {
+                width: 35%;
+            }
+
+            .bet-btn:nth-of-type(2) {
+                width: 35%;
+            }
+
+            .bet-btn:nth-of-type(3) {
+                width: 35%;
+            }
+        }
+
+        .time,
+        .market-name {
+            color: $text-color-gray;
+            margin: 5px 0;
+        }
+
     }
 
 }
 
-.upcoming-events-content {
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    background-color: #2e364e;
-    padding: 10px;
-    font-size: 12px;
+// --------------- Left Sidebar End --------------- //
 
-    .upcoming-fixture-body {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        margin: 1em 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
 
-        &:last-child {
-            border-bottom: none;
+// ---------------  Main Container Begin --------------- //
+.main-container {
+    display: flex;
+    width: 75%;
+
+    // --------------- Left Container Begin --------------- //
+
+    .left-container {
+        width: 60%;
+        margin: 0 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        // --------------- Today Events Begin --------------- //
+
+        .today-events-header {
+            background-color: $sub-header-bg-color;
+            color: $text-color-gray;
+            padding: 10px;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
         }
 
+        .today-events-content {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            background-color: #2b3750;
+            padding: 4px;
+
+            &::-webkit-scrollbar-thumb {
+                height: 5px;
+                background: #485475;
+                border-radius: 6px;
+            }
+
+            &::-webkit-scrollbar {
+                height: 5px;
+                cursor: pointer;
+                background: #b1b5b8;
+                border-radius: 6px;
+
+                &:active {
+                    background: #383b3d;
+                }
+            }
+
+            .event-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-right: 0.7em;
+                padding: 0 36px;
+                cursor: pointer;
+                color: $text-color-gray;
+                background-color: #373f5d;
+                border-radius: 5px;
+                font-size: 13px;
+                text-align: center;
+                height: 70px;
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+
+                .icon {
+                    font-size: 25px;
+                    margin-bottom: 0.3em;
+                }
+
+
+                &:hover,
+                &.active {
+                    color: $text-color-white;
+                }
+
+                .count {
+                    // display: none;
+                    position: relative;
+                    left: 26px;
+                    bottom: 47px;
+                    font-size: 10px;
+                    background-color: #47537a;
+                    border-radius: 50%;
+                    color: $text-color-white;
+                    padding: 2px 3px;
+                }
+            }
+        }
+
+        // --------------- Today Events End --------------- //
+
+        // --------------- Upcoming Events Begin --------------- //
+
+        .upcoming-events-header {
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            margin-top: 15px;
+            background-color: #343c56;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+
+            .upcoming-tabs {
+                display: flex;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 14px;
+
+                .tab {
+                    margin: 0 10px;
+
+                }
+
+                .tab .active .fa-solid {
+                    color: $text-color-white;
+                }
+
+                .tab .fa-solid {
+                    color: gray;
+                }
+
+                .active,
+                .tab a:hover {
+                    padding: 0.5em;
+                    display: flex;
+                    background-color: #2c354c;
+                    color: $text-color-white;
+                    border-radius: 4px;
+                    border-top: 2px solid #efc760;
+                }
+
+                .tab-text {
+                    display: none;
+                }
+
+                .active .tab-text {
+                    margin: 0 0.2em;
+                    display: block;
+                    font-size: 14px;
+                }
+            }
+
+        }
+
+        .upcoming-events-content {
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            background-color: #2e364e;
+            padding: 10px;
+            font-size: 12px;
+
+            .upcoming-fixture-body {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                margin: 1em 0;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+
+                .item:nth-of-type(2) {
+                    width: 25%;
+                }
+
+                .item:nth-of-type(4) {
+                    width: 38%;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .item:nth-of-type(5) {
+                    width: 33%;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .item:nth-of-type(7) {
+                    width: 9%;
+                }
+
+                .item {
+                    margin: 0.5em;
+
+                }
+
+                .time {
+                    color: #378fcc;
+                    margin-bottom: 0.5em;
+                }
+
+                .team-home {
+                    margin-bottom: 0.5em;
+                }
+
+                .date {
+                    color: $text-color-gray;
+                }
+
+                .fa-star {
+                    color: #efc760;
+                }
+
+                .live {
+                    background-color: $text-color-green;
+                    padding: 1px 15px;
+                    border-top-left-radius: 6px;
+                    border-bottom-right-radius: 6px;
+                    font-size: 12px;
+                }
+
+                .fa-chart-simple {
+                    font-size: 15px;
+
+                }
+            }
+        }
+    }
+
+    .upcoming-fixture-header {
+        color: $text-color-gray;
+        font-size: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        justify-content: space-between;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         .item:nth-of-type(2) {
             width: 25%;
@@ -489,197 +565,131 @@ button.active {
         }
 
         .item {
-            margin: 0.5em;
-
-        }
-
-        .time {
-            color: #378fcc;
-            margin-bottom: 0.5em;
-        }
-
-        .team-home {
-            margin-bottom: 0.5em;
-        }
-
-        .date {
-            color: $text-color-gray;
-        }
-
-        .fa-star {
-            color: #efc760;
-        }
-
-        .live {
-            background-color: $text-color-green;
-            padding: 1px 15px;
-            border-top-left-radius: 6px;
-            border-bottom-right-radius: 6px;
-            font-size: 12px;
-        }
-
-        // .bet-btn {
-        //     margin-bottom: 0.5em;
-        // }
-
-        .fa-chart-simple {
-            font-size: 15px;
-
+            margin: 0.2em 0;
         }
     }
-}
 
+    // --------------- Upcoming Events End --------------- //
 
-
-.tab i.fa-solid {
-    color: white;
-}
-
-.upcoming-fixture-header {
-    color: $text-color-gray;
-    font-size: 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: space-between;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    .item:nth-of-type(2) {
-        width: 25%;
+    // ---------------  Casino Container Begin --------------- //
+    .casino-games-header {
+        color: $text-color-gray;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        background-color: #343c56;
+        padding: 10px;
+        margin-top: 15px;
     }
 
-    .item:nth-of-type(4) {
-        width: 38%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .item:nth-of-type(5) {
-        width: 33%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .item:nth-of-type(7) {
-        width: 9%;
-    }
-
-    .item {
-        margin: 0.2em 0;
-    }
-}
-
-.casino-games-header {
-    color: $text-color-gray;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    background-color: #343c56;
-    padding: 10px;
-    margin-top: 15px;
-}
-
-.casino-games-content {
-    cursor: pointer;
-    padding: 15px;
-    font-size: 10px;
-    background-color: #2e3650;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    &::-webkit-scrollbar-thumb {
-        height: 5px;
-        background: #485475;
-        border-radius: 6px;
-    }
-
-    &::-webkit-scrollbar {
-        height: 5px;
+    .casino-games-content {
         cursor: pointer;
-        background: #b1b5b8;
-        border-radius: 6px;
+        padding: 15px;
+        font-size: 10px;
+        background-color: #2e3650;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
 
-        &:active {
-            background: #383b3d;
+        &::-webkit-scrollbar-thumb {
+            height: 5px;
+            background: #485475;
+            border-radius: 6px;
         }
-    }
 
-    .casino-card {
-        position: relative;
+        &::-webkit-scrollbar {
+            height: 5px;
+            cursor: pointer;
+            background: #b1b5b8;
+            border-radius: 6px;
 
-
-        .card-img {
-            //  height: 11vh;
-            // 
-
-            img {
-                width: 16vh;
-                margin: 0 5px;
-                border-radius: 10px;
-
-                &:hover {
-                    background-color: rgba(0, 0, 0, 0.4);
-                    transition: all 0.3s ease;
-
-                    .real,
-                    .free {
-                        display: block;
-                    }
-                }
+            &:active {
+                background: #383b3d;
             }
         }
 
-        .game-info {
+        .casino-card {
             position: relative;
-            bottom: 80px;
-            left: 10px;
-            background-color: #378fcc;
-            border-radius: 4px;
-            padding: 1px 4px;
-            text-transform: uppercase;
-        }
 
-        .real,
-        .free {
-            display: none;
-            background-color: $bet-btn-base-bg-color;
-            color: $text-color-white;
-            border: none;
-            border-radius: 6px;
-            font-size: 12px;
-            padding: 0 45px;
-            cursor: pointer;
-        }
 
-        .real {
+            .card-img {
+                //  height: 11vh;
+                // 
 
-            margin: 0.3em 0;
-            background-color: $bet-btn-bg-color-selected;
-        }
+                img {
+                    width: 16vh;
+                    margin: 0 5px;
+                    border-radius: 10px;
 
-        .free {
-            background-color: #346888;
-        }
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.4);
+                        transition: all 0.3s ease;
 
-        .card-name {
-            font-size: 12px;
-            text-align: center;
-            color: $text-color-gray;
-        }
+                        .real,
+                        .free {
+                            display: block;
+                        }
+                    }
+                }
+            }
 
-        .card-hover {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
+            .game-info {
+                position: relative;
+                bottom: 80px;
+                left: 10px;
+                background-color: #378fcc;
+                border-radius: 4px;
+                padding: 1px 4px;
+                text-transform: uppercase;
+            }
 
+            .real,
+            .free {
+                display: none;
+                background-color: $bet-btn-base-bg-color;
+                color: $text-color-white;
+                border: none;
+                border-radius: 6px;
+                font-size: 12px;
+                padding: 0 45px;
+                cursor: pointer;
+            }
+
+            .real {
+
+                margin: 0.3em 0;
+                background-color: $bet-btn-bg-color-selected;
+            }
+
+            .free {
+                background-color: #346888;
+            }
+
+            .card-name {
+                font-size: 12px;
+                text-align: center;
+                color: $text-color-gray;
+            }
+
+            .card-hover {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+
+            }
         }
     }
+
+    // ---------------  Casino Container End --------------- //
 }
+
+// --------------- Left Container End --------------- //
+
+
+// --------------- Right Container Begin --------------- //
 
 .right-container {
     color: $text-color-gray;
@@ -689,28 +699,6 @@ button.active {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
-    .league-content {
-        background-color: #2e364e;
-
-        .fixture-list-view-header {
-            display: flex;
-            align-items: center;
-            justify-content: end;
-
-
-        }
-
-
-        .fixture-list-view li {
-            padding: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-            &:last-child {
-                border-bottom: none;
-            }
-        }
-    }
 
     .league-header {
         height: 13vh;
@@ -722,44 +710,76 @@ button.active {
             height: 13vh;
             object-fit: cover;
         }
-    }
 
-    .img-title {
-        color: $text-color-white;
-        background-color: rgba(0, 0, 0, 0.5);
-        position: relative;
-        padding: 6px 5px;
-        bottom: 47px;
-        display: flex;
-        justify-content: space-between;
+        .img-title {
+            color: $text-color-white;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: relative;
+            padding: 6px 5px;
+            bottom: 47px;
+            display: flex;
+            justify-content: space-between;
 
-        .first-line {
-            font-size: 16px;
+            .first-line {
+                font-size: 16px;
+            }
+        }
+
+        .btn-season {
+            cursor: pointer;
+            background-color: $bet-btn-base-bg-color;
+            color: $text-color-white;
+            border-radius: 4px;
+            border: none;
         }
     }
 
-    .btn-season {
-        cursor: pointer;
-        background-color: $bet-btn-base-bg-color;
-        color: $text-color-white;
-        border-radius: 4px;
-        border: none;
+    .league-content {
+        background-color: #2e364e;
+
+        .fixture-list-view li {
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        .fixture-list-view-header {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+
+        .other-btn {
+            cursor: pointer;
+            padding: 15px 10px;
+            margin-bottom: 0.4em;
+            background-color: $bet-btn-base-bg-color;
+            color: $text-color-white;
+            border-radius: 4px;
+            border: none;
+            // .bet-btn {
+            //     width: auto;
+            // }
+        }
+
+        .fixture-list-view-body {
+            .bet-btn-group {
+                display: flex;
+            }
+        }
     }
 
-
-
-    .other-btn {
-        cursor: pointer;
-        padding: 15px 10px;
-        margin-bottom: 0.4em;
-        background-color: $bet-btn-base-bg-color;
-        color: $text-color-white;
-        border-radius: 4px;
-        border: none;
-    }
 }
 
-#rightSidebar {
+// --------------- Right Container End --------------- //
+// --------------- Main Container End --------------- //
+
+
+// --------------- Right Sidebar Begin --------------- //
+.right-sidebar {
     width: 13%;
     margin: 0 0.5em;
 
@@ -769,255 +789,267 @@ button.active {
         color: $text-color-white;
     }
 
-}
+    // --------------- Bet Slip Begin --------------- //
+    .bet-slip {
+        font-size: 14px;
+        color: $text-color-black;
 
-.bet-slip {
-    font-size: 14px;
-    color: $text-color-black;
+        .bet-slip-header {
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            padding: 10px;
+            background-color: #dbe6f2;
+            display: flex;
+            justify-content: space-between;
 
-    .bet-slip-content {
-        background-color: #dbe6f2;
-        font-size: 12px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+            .bet-slip-title .count {
+                background-color: #b2b2b4;
+                color: $text-color-white;
+                border-radius: 50%;
+                padding: 0 4px;
+            }
 
-        .bet-slip-tabs a {
-            color: $text-color-gray;
-            position: relative;
+            .bet-slip-action {
+                button {
+                    cursor: pointer;
+                    border: none;
+                    font-size: 16px;
+                    background-color: #dbe6f2;
+                }
 
-            &:hover {
-                color: $text-color-black;
-                border-bottom: 4px solid #ed6445;
-                border-bottom-right-radius: 3px;
-                border-bottom-left-radius: 3px;
+                .fa-trash {
+                    color: #356987;
+                }
             }
         }
 
-        .tab .active {
-            color: $text-color-black;
-            border-bottom: 4px solid #ed6445;
-            border-bottom-left-radius: 3px;
-            border-bottom-right-radius: 3px;
-        }
-
-        .coupon {
-            display: flex;
-            justify-content: space-between;
-            border-radius: 6px;
-            margin: 10px 6px;
-            padding: 10px;
-            background-color: #fff;
+        .bet-slip-content {
+            background-color: #dbe6f2;
+            font-size: 12px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
 
-            .match-check .fa-circle-check {
-                color: #b0b3b0;
-                font-size: 18px;
+            .bet-slip-tabs {
+                display: flex;
+                justify-content: space-around;
+
+                a {
+                    color: $text-color-gray;
+                    position: relative;
+
+                    &:hover {
+                        color: $text-color-black;
+                        border-bottom: 4px solid #ed6445;
+                        border-bottom-right-radius: 3px;
+                        border-bottom-left-radius: 3px;
+                    }
+                }
+
+                .tab .active {
+                    color: $text-color-black;
+                    border-bottom: 4px solid #ed6445;
+                    border-bottom-left-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                }
+
             }
 
-            .selection {
-                font-weight: bold;
-            }
+            .coupon-container {
 
-            .coupon-close {
-                button {
-                    cursor: pointer;
-                    border: none;
+                .coupon {
+                    display: flex;
+                    justify-content: space-between;
+                    border-radius: 6px;
+                    margin: 10px 6px;
+                    padding: 10px;
                     background-color: #fff;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
 
-                    .fa-xmark {
-                        font-size: 16px;
+                    .match-check .fa-circle-check {
+                        color: #b0b3b0;
+                        font-size: 18px;
+                    }
+
+                    .btg-name {
+                        color: $text-color-gray;
+                        margin: 0.4em 0;
+                    }
+
+                    .selection {
+                        font-weight: bold;
+                    }
+
+                    .coupon-close {
+                        button {
+                            cursor: pointer;
+                            border: none;
+                            background-color: #fff;
+
+                            .fa-xmark {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .match-rate {
+                        color: #ed6445;
+                        font-weight: bold;
                     }
                 }
             }
 
-            .btg-name {
-                color: $text-color-gray;
-                margin: 0.4em 0;
-            }
+            .coupon-amount {
+                background-color: #dbe6f2;
+                padding: 0 3px;
 
-            .match-rate {
-                color: #ed6445;
-                font-weight: bold;
-            }
-        }
-
-        .coupon-amount {
-            background-color: #dbe6f2;
-            padding: 0 3px;
-
-            input {
-                cursor: pointer;
-                border: 10px solid #252941;
-                border-radius: 10px;
-                width: 100%;
-                margin-bottom: 10px;
-                // input::placeholder {
-                //     border-radius: 10px;
-                // }
-            }
-        }
-    }
-
-    .coupon-footer {
-        background-color: #fff;
-        padding: 10px;
-
-        .total-container {
-            font-weight: bold;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-
-            .total-rate {
-                margin: 0.3em 0 1em 0;
-            }
-
-
-            .total-coupon-num,
-            .total-rate-num {
-                color: #ed6445;
+                input[type="number"] {
+                    cursor: pointer;
+                    border: 10px solid #252941;
+                    border-radius: 10px;
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                input[type="number"]::placeholder {
+                    border-radius: 10px;
+                }
             }
         }
 
-        .check input {
-            cursor: pointer;
-        }
-
-        .check-group {
-            margin: 1em 0;
-        }
-
-        .confirm-bet-btn,
-        .reserve-bet-btn {
-            background-color: $bet-btn-bg-color-active;
-            color: $text-color-white;
-            border: none;
-            border-radius: 4px;
+        .coupon-footer {
+            background-color: #fff;
             padding: 10px;
+
+            .total-container {
+                font-weight: bold;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+                .total-rate {
+                    margin: 0.3em 0 1em 0;
+                }
+
+                .total-coupon-num,
+                .total-rate-num {
+                    color: #ed6445;
+                }
+
+                .total-coupon {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .total-rate {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+            .check-group {
+                margin: 1em 0;
+
+                .check input {
+                    cursor: pointer;
+                }
+            }
+
+            .footer-button-main {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .confirm-bet-btn,
+                .reserve-bet-btn {
+                    background-color: $bet-btn-bg-color-active;
+                    color: $text-color-white;
+                    border: none;
+                    border-radius: 4px;
+                    padding: 7px;
+                    cursor: pointer;
+                    margin: 2px;
+                }
+
+                .reserve-bet-btn {
+                    background-color: #252b3f;
+                }
+            }
+        }
+    }
+
+    // --------------- Bet Slip End --------------- //
+
+    // --------------- Coupon Check Begin --------------- //
+
+    .numpad {
+        border-radius: 6px;
+        background-color: #343c56;
+        margin-top: 10px;
+
+        .numpad-header {
+            color: $text-color-gray;
+            font-size: 14px;
+            padding: 8px;
+        }
+    }
+
+    .numpad-content {
+        padding: 5px;
+
+        .fast-btns {
+            display: flex;
+
+            .flex-item {
+                width: 100%;
+                font-size: 10px;
+                padding: 5px 2px;
+                margin: 0 2px;
+                cursor: pointer;
+                background-color: $bet-btn-bg-color-active;
+                color: $text-color-white;
+                border: none;
+                border-radius: 4px;
+            }
+        }
+    }
+
+
+    .numbers-cont {
+        display: grid;
+        grid-template-columns: repeat(4, fr);
+        grid-gap: 5px;
+        margin-top: 5px;
+
+        .item {
             cursor: pointer;
-            margin: 2px;
-        }
-
-        .reserve-bet-btn {
-            background-color: #252b3f;
-        }
-    }
-
-    .bet-slip-title .count {
-        background-color: #b2b2b4;
-        color: $text-color-white;
-        border-radius: 50%;
-        padding: 0 4px;
-    }
-
-    .bet-slip-action {
-        button {
-            cursor: pointer;
-            border: none;
-            font-size: 16px;
-            background-color: #dbe6f2;
-        }
-
-        .fa-trash {
-            color: #356987;
-        }
-    }
-
-
-}
-
-.bet-slip-header {
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    padding: 10px;
-    background-color: #dbe6f2;
-    display: flex;
-    justify-content: space-between;
-}
-
-.bet-slip-tabs {
-    display: flex;
-    justify-content: space-around;
-}
-
-.total-coupon {
-    display: flex;
-    justify-content: space-between;
-}
-
-.total-rate {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-button-main button {
-    width: 100%;
-}
-
-.numpad {
-    border-radius: 6px;
-    background-color: #343c56;
-    margin-top: 10px;
-
-    .numpad-header {
-        color: $text-color-gray;
-        font-size: 14px;
-        padding: 8px;
-    }
-}
-
-.numpad-content {
-    padding: 5px;
-
-    .fast-btns {
-        display: flex;
-
-        .flex-item {
-            width: 100%;
-            font-size: 10px;
-            padding: 5px 2px;
-            margin: 0 2px;
-            cursor: pointer;
-            background-color: $bet-btn-bg-color-active;
             color: $text-color-white;
-            border: none;
+            background-color: #222b42;
             border-radius: 4px;
+            border: none;
+            padding: 10px 20px;
+
         }
+
+        .backspace {
+            background-color: #346886;
+            grid-area: 1 / 5 / 3 / 4;
+            padding: 20px;
+        }
+
+        .enter {
+            background-color: #346886;
+            grid-area: 3 / 5 / 5 / 4;
+            padding: 20px;
+        }
+
+        //     .zero {
+        //        padding: 10px 45px;
+        //       width: 100%;
+        //    }
     }
+
+    // --------------- Coupon Check End --------------- //
 }
 
-
-.numbers-cont {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 5px;
-    margin-top: 5px;
-
-    .item {
-        cursor: pointer;
-        color: $text-color-white;
-        background-color: #222b42;
-        border-radius: 4px;
-        border: none;
-        padding: 10px 20px;
-
-    }
-
-    .backspace {
-        background-color: #346886;
-        grid-area: 1 / 5 / 3 / 4;
-        padding: 20px;
-    }
-
-    .enter {
-        background-color: #346886;
-        grid-area: 3 / 5 / 5 / 4;
-        padding: 20px;
-    }
-
-    //     .zero {
-    //        padding: 10px 45px;
-    //       width: 100%;
-    //    }
-}
+// --------------- Right Sidebar End --------------- //
+// --------------- Content End --------------- //
