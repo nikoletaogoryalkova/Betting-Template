@@ -103,9 +103,27 @@ body {
         color: #efc760;
     }
 
+    .bet-btn-group {
+        height: 50px;
+        
+        .bet-btn:nth-of-type(1) {
+            width: 35%;
+        }
+
+        .bet-btn:nth-of-type(2) {
+            width: 35%;
+        }
+
+        .bet-btn:nth-of-type(3) {
+            width: 35%;
+        }
+    }
+    
 }
 
 .bet-btn {
+    width: 100%;
+    box-sizing: border-box;
     background-color: $bet-btn-base-bg-color;
     color: $text-color-white;
     border: none;
@@ -113,15 +131,26 @@ body {
     padding: 10px;
     cursor: pointer;
     margin: 0 2px;
-
+    
     &:hover {
         background-color: $bet-btn-bg-color-hover;
         transition: all 0.3s ease;
+    }
+    span{
+        display: flex;
+        justify-content: center;
+        &:last-child {
+            font-size: 10px;
+            opacity: 0.5;
+        }
     }
 }
 
 button.active {
     background-color: $bet-btn-bg-color-active;
+    span:last-child {
+        opacity: 1;
+    }
 }
 
 
@@ -330,6 +359,7 @@ button.active {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         margin: 1em 0;
         display: flex;
+        // flex-direction: row;
         align-items: center;
 
         .item:nth-of-type(2) {
@@ -353,12 +383,17 @@ button.active {
         }
 
         .item {
-            margin: 0 5px;
+            margin: 0 0.4em;
 
         }
 
         .time {
             color: #378fcc;
+            margin-bottom: 0.5em;
+        }
+
+        .team-home {
+            margin-bottom: 0.5em;
         }
 
         .date {
@@ -379,16 +414,6 @@ button.active {
 
         .bet-btn {
             margin-bottom: 0.5em;
-
-            span {
-                display: flex;
-                justify-content: center;
-
-                &:last-child {
-                    font-size: 11px;
-                    opacity: 0.5;
-                }
-            }
         }
 
         .fa-chart-simple {
@@ -410,7 +435,26 @@ button.active {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1em;
+
+    .item:nth-of-type(2) {
+        width: 25%;
+    }
+
+    .item:nth-of-type(4) {
+        width: 38%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .item:nth-of-type(5) {
+        width: 33%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .item:nth-of-type(7) {
+        width: 9%;
+    }
 
     .item {
         margin: 0.2em 0;
@@ -558,6 +602,8 @@ button.active {
 
     .fixture-list-view-header {
         display: flex;
+        justify-content: space-between;
+     
     }
 
     .other-btn {
@@ -787,7 +833,7 @@ button.active {
 
 .numbers-cont {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
     margin-top: 5px;
 
@@ -800,20 +846,21 @@ button.active {
         padding: 10px 20px;
 
     }
+
     .backspace {
         background-color: #346886;
-        grid-area: 1 / 6 / 3 / 4;
+        grid-area: 1 / 5 / 3 / 4;
         padding: 20px;
     }
 
     .enter {
         background-color: #346886;
-        grid-area: 3 / 6 / 6 / 4;
+        grid-area: 3 / 5 / 5 / 4;
         padding: 20px;
     }
 
-//     .zero {
-//        padding: 10px 45px;
-//       width: 100%;
-//    }
+    //     .zero {
+    //        padding: 10px 45px;
+    //       width: 100%;
+    //    }
 }

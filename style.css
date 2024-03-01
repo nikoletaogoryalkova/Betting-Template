@@ -84,8 +84,22 @@ body {
 .match-infos .fa-star {
   color: #efc760;
 }
+.match-infos .bet-btn-group {
+  height: 50px;
+}
+.match-infos .bet-btn-group .bet-btn:nth-of-type(1) {
+  width: 35%;
+}
+.match-infos .bet-btn-group .bet-btn:nth-of-type(2) {
+  width: 35%;
+}
+.match-infos .bet-btn-group .bet-btn:nth-of-type(3) {
+  width: 35%;
+}
 
 .bet-btn {
+  width: 100%;
+  box-sizing: border-box;
   background-color: #455377;
   color: #fff;
   border: none;
@@ -98,9 +112,20 @@ body {
   background-color: #f16442;
   transition: all 0.3s ease;
 }
+.bet-btn span {
+  display: flex;
+  justify-content: center;
+}
+.bet-btn span:last-child {
+  font-size: 10px;
+  opacity: 0.5;
+}
 
 button.active {
   background-color: #f16442;
+}
+button.active span:last-child {
+  opacity: 1;
 }
 
 .tabs-container {
@@ -302,10 +327,14 @@ button.active {
   width: 9%;
 }
 .upcoming-events-content .upcoming-fixture-body .item {
-  margin: 0 5px;
+  margin: 0 0.4em;
 }
 .upcoming-events-content .upcoming-fixture-body .time {
   color: #378fcc;
+  margin-bottom: 0.5em;
+}
+.upcoming-events-content .upcoming-fixture-body .team-home {
+  margin-bottom: 0.5em;
 }
 .upcoming-events-content .upcoming-fixture-body .date {
   color: #97999d;
@@ -323,14 +352,6 @@ button.active {
 .upcoming-events-content .upcoming-fixture-body .bet-btn {
   margin-bottom: 0.5em;
 }
-.upcoming-events-content .upcoming-fixture-body .bet-btn span {
-  display: flex;
-  justify-content: center;
-}
-.upcoming-events-content .upcoming-fixture-body .bet-btn span:last-child {
-  font-size: 11px;
-  opacity: 0.5;
-}
 .upcoming-events-content .upcoming-fixture-body .fa-chart-simple {
   font-size: 15px;
 }
@@ -345,7 +366,22 @@ button.active {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1em;
+}
+.upcoming-fixture-header .item:nth-of-type(2) {
+  width: 25%;
+}
+.upcoming-fixture-header .item:nth-of-type(4) {
+  width: 38%;
+  display: flex;
+  justify-content: center;
+}
+.upcoming-fixture-header .item:nth-of-type(5) {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+}
+.upcoming-fixture-header .item:nth-of-type(7) {
+  width: 9%;
 }
 .upcoming-fixture-header .item {
   margin: 0.2em 0;
@@ -472,6 +508,7 @@ button.active {
 }
 .right-container .fixture-list-view-header {
   display: flex;
+  justify-content: space-between;
 }
 .right-container .other-btn {
   cursor: pointer;
@@ -658,7 +695,7 @@ button.active {
 
 .numbers-cont {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
   margin-top: 5px;
 }
@@ -672,11 +709,11 @@ button.active {
 }
 .numbers-cont .backspace {
   background-color: #346886;
-  grid-area: 1/6/3/4;
+  grid-area: 1/5/3/4;
   padding: 20px;
 }
 .numbers-cont .enter {
   background-color: #346886;
-  grid-area: 3/6/6/4;
+  grid-area: 3/5/5/4;
   padding: 20px;
 }/*# sourceMappingURL=style.css.map */
