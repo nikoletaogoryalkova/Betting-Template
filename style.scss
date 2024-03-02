@@ -47,7 +47,7 @@ body {
     background-color: $bet-btn-base-bg-color;
     color: $text-color-white;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.3em;
     padding: 10px;
     cursor: pointer;
     margin: 0 2px;
@@ -114,9 +114,10 @@ body {
             cursor: pointer;
             background-color: #3e4a6b;
             color: $text-color-white;
-            border-radius: 30px;
+            border-radius: 2em;
             padding: 16px 26px;
             border: none;
+            width: 100%;
         }
 
         .live {
@@ -124,6 +125,7 @@ body {
             color: $text-color-gray;
             border: none;
             margin-left: 2em;
+            width: 100%;
         }
     }
 
@@ -155,7 +157,7 @@ body {
             background-color: #f16442;
             height: 1rem;
             width: 1rem;
-            border-radius: 5px;
+            border-radius: 0.4em;
             padding: 10px;
         }
 
@@ -344,14 +346,14 @@ body {
             &::-webkit-scrollbar-thumb {
                 height: 5px;
                 background: #485475;
-                border-radius: 6px;
+                border-radius: 0.4em;
             }
 
             &::-webkit-scrollbar {
                 height: 5px;
                 cursor: pointer;
                 background: #b1b5b8;
-                border-radius: 6px;
+                border-radius: 0.4em;
 
                 &:active {
                     background: #383b3d;
@@ -368,7 +370,7 @@ body {
                 cursor: pointer;
                 color: $text-color-gray;
                 background-color: #373f5d;
-                border-radius: 5px;
+                border-radius: 0.4em;
                 font-size: 13px;
                 text-align: center;
                 height: 70px;
@@ -454,7 +456,7 @@ body {
                     display: flex;
                     background-color: #2c354c;
                     color: $text-color-white;
-                    border-radius: 4px;
+                    border-radius: 0.3em;
                     border-top: 2px solid #efc760;
 
                     .tab-text {
@@ -617,14 +619,14 @@ body {
         &::-webkit-scrollbar-thumb {
             height: 5px;
             background: #485475;
-            border-radius: 6px;
+            border-radius: 0.4em;
         }
 
         &::-webkit-scrollbar {
             height: 5px;
             cursor: pointer;
             background: #b1b5b8;
-            border-radius: 6px;
+            border-radius: 0.4em;
 
             &:active {
                 background: #383b3d;
@@ -642,7 +644,7 @@ body {
                 img {
                     width: 16vh;
                     margin: 0 5px;
-                    border-radius: 10px;
+                    border-radius: 1em;
 
                     &:hover {
                         background-color: rgba(0, 0, 0, 0.4);
@@ -661,7 +663,7 @@ body {
                 bottom: 80px;
                 left: 10px;
                 background-color: #378fcc;
-                border-radius: 4px;
+                border-radius: 0.3em;
                 padding: 1px 4px;
                 text-transform: uppercase;
             }
@@ -672,7 +674,7 @@ body {
                 background-color: $bet-btn-base-bg-color;
                 color: $text-color-white;
                 border: none;
-                border-radius: 6px;
+                border-radius: 0.3em;
                 font-size: 12px;
                 padding: 0 45px;
                 cursor: pointer;
@@ -750,7 +752,7 @@ body {
             cursor: pointer;
             background-color: $bet-btn-base-bg-color;
             color: $text-color-white;
-            border-radius: 4px;
+            border-radius: 0.3em;
             border: none;
         }
     }
@@ -779,7 +781,7 @@ body {
             margin-bottom: 0.4em;
             background-color: $bet-btn-base-bg-color;
             color: $text-color-white;
-            border-radius: 4px;
+            border-radius: 0.3em;
             border: none;
             // .bet-btn {
             //     width: auto;
@@ -881,7 +883,7 @@ body {
                 .coupon {
                     display: flex;
                     justify-content: space-between;
-                    border-radius: 6px;
+                    border-radius: 0.4em;
                     margin: 10px 6px;
                     padding: 10px;
                     background-color: #fff;
@@ -929,13 +931,13 @@ body {
                 input[type="number"] {
                     cursor: pointer;
                     border: 10px solid #252941;
-                    border-radius: 10px;
+                    border-radius: 1em;
                     width: 100%;
                     margin-bottom: 10px;
                 }
 
                 input[type="number"]::placeholder {
-                    border-radius: 10px;
+                    border-radius: 1em;
                 }
             }
         }
@@ -986,7 +988,7 @@ body {
                     background-color: $bet-btn-bg-color-active;
                     color: $text-color-white;
                     border: none;
-                    border-radius: 4px;
+                    border-radius: 0.3em;
                     padding: 7px;
                     cursor: pointer;
                     margin: 2px;
@@ -1004,7 +1006,7 @@ body {
     // --------------- Coupon Check Begin --------------- //
 
     .numpad {
-        border-radius: 6px;
+        border-radius: 0.3em;
         background-color: #343c56;
         margin-top: 10px;
 
@@ -1030,7 +1032,7 @@ body {
                 background-color: $bet-btn-bg-color-active;
                 color: $text-color-white;
                 border: none;
-                border-radius: 4px;
+                border-radius: 0.3em;
             }
         }
     }
@@ -1038,10 +1040,9 @@ body {
     .numbers-cont {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, 1fr); 
-        gap: 5px;
-        margin-top: 5px;
-        
+        grid-template-rows: repeat(4, auto); 
+        gap: 0.3em;
+        margin-top: 0.3em;
     }
      
     .item {
@@ -1050,15 +1051,15 @@ body {
         cursor: pointer;
         color: white;
         background-color: #222b42;
-        border-radius: 4px;
+        border-radius: 0.3em;
         border: none;
-        padding: 10px 20px;
-        font-size: 12px;
+        padding: 0.8em;
+        font-size: 0.8em;
         font-weight: bold;
     }
      
     .zero {
-        grid-column: span 2;
+        grid-column: 1 / span 2;
     }
      
      
@@ -1076,78 +1077,6 @@ body {
         grid-row: 3 / span 2; 
         background-color: #346886;
     } 
-     
-    .item:nth-child(4),
-    .item:nth-child(7) {
-        grid-column: 1;
-      }
-
-    // .numbers-cont {
-    //     display: grid;
-    //     grid-template-columns: repeat(3, 1fr);
-    //     grid-template-rows: auto auto auto auto;
-    //     gap: 5px;
-    //     margin-top: 5px;
-    //     // width: 300px; /* Adjust width as needed */
-    //     // height: 400px; /* Adjust height as needed */
-    // }
-
-    // .item {
-    //     display: grid;
-    //     place-items: center;
-    //     cursor: pointer;
-    //     color: $text-color-white;
-    //     background-color: #222b42;
-    //     border-radius: 4px;
-    //     border: none;
-    //     padding: 5px;
-    // }
-
-    // .item.zero {
-    //     grid-column: span 2;
-    // }
-
-    // .backspace {
-    //     //  justify-self: center;
-    //     grid-area: 1 / 5 / 3 / 6;
-    //     background-color: #346886;
-    // }
-
-    // .enter {
-    //     grid-area: 3 / 5 / 6 / 6;
-    //     background-color: #346886;
-
-    //     // .numbers-cont {
-    //     //     display: grid;
-    //     //     grid-template-columns: repeat(3, 1fr);
-    //     //     grid-gap: 5px;
-    //     //     margin-top: 5px;
-
-    //     //     .item {
-    //     //         cursor: pointer;
-    //     //         color: $text-color-white;
-    //     //         background-color: #222b42;
-    //     //         border-radius: 4px;
-    //     //         border: none;
-    //     //         padding: 10px 20px;
-    //     //     }
-
-    //     //     .backspace {
-    //     //         background-color: #346886;
-    //     //         padding: 20px;
-    //     //     }
-
-    //     //     .enter {
-    //     //         background-color: #346886;
-    //     //         grid-area: 3 / 5 / 3 / 5;
-    //     //         padding: 20px;
-    //     //     }
-
-    //     //     .zero {
-    //     //         // grid-column: span 2;
-
-    //     //     }
-    // }
 
     // --------------- Coupon Check End --------------- //
 }
