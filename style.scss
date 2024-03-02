@@ -42,7 +42,7 @@ body {
 
 // --------------- Bet Button Begin --------------- //
 .bet-btn {
-    width: 100%;
+    // width: 100%;
     box-sizing: border-box;
     background-color: $bet-btn-base-bg-color;
     color: $text-color-white;
@@ -89,7 +89,7 @@ body {
 // --------------- Left Sidebar Begin --------------- //
 
 .left-sidebar {
-    width: 12%;
+    width: 14%;
 
     .closebtn {
         background-color: #252c3c;
@@ -104,9 +104,7 @@ body {
     .tabs-container {
         display: flex;
         flex-direction: row;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+
 
 
         .tab-item,
@@ -115,17 +113,28 @@ body {
             background-color: #3e4a6b;
             color: $text-color-white;
             border-radius: 2em;
-            padding: 16px 26px;
+            padding: 1.1em 1.2em;
             border: none;
-            width: 100%;
+            width: 50%;
+            text-align: center;
+            font-size: 0.75em;
+
+
         }
 
         .live {
             background-color: #252b3c;
             color: $text-color-gray;
             border: none;
-            margin-left: 2em;
-            width: 100%;
+            padding: 1.1em 1.2em;
+            width: 50%;
+            text-align: center;
+            font-size: 0.75em;
+            //     white-space: nowrap;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+            margin-left: 3px;
+            // width: 100%;
         }
     }
 
@@ -143,8 +152,8 @@ body {
             background: #455476;
             cursor: pointer;
             height: 0.5rem;
-            border-top-left-radius: 6px;
-            border-bottom-left-radius: 6px;
+            border-top-left-radius: 0.4em;
+            border-bottom-left-radius: 0.4m;
         }
 
         //--- Thumb Styles --//
@@ -165,31 +174,11 @@ body {
             margin-top: 1em;
             font-size: 11px;
             display: flex;
-            justify-content: space-between;
-            // .range-number:nth-of-type(1) {
-            //     padding-right: 1.4em;
-            // }
-            // .range-number:nth-of-type(2) {
-            //     padding-right: 1.5em;
-            // }
-            // .range-number:nth-of-type(3) {
-            //     padding-right: 1.4em;
-            // }
-            // .range-number:nth-of-type(4) {
-            //     padding-right: 1.9em;
-            // }
-            // .range-number:nth-of-type(5) {
-            //     padding-right: 1.4em;
-            // }
-            // .range-number:nth-of-type(6) {
-            //     padding-right: 1em;
-            // }
-            // .range-number:nth-of-type(7) {
-            //     padding-right: 1em;
-            // }
-            // .range-number:nth-of-type(8) {
-            //     padding-right: 1em;
-            // }
+
+            // justify-content: space-between;
+            .range-number {
+                flex: 1;
+            }
         }
     }
 
@@ -197,6 +186,8 @@ body {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        border-top-left-radius: 0.4em;
+        border-top-right-radius: 0.4em;
 
         .m1-list .active a {
             color: $text-color-white;
@@ -213,9 +204,9 @@ body {
             justify-content: space-between;
             align-items: center;
             background-color: #36405b;
-            padding: 10px 10px;
+            padding: 10px;
             color: $text-color-gray;
-            font-size: 14px;
+            font-size: 0.9em;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
             &:last-child {
@@ -227,10 +218,10 @@ body {
             }
         }
 
-        .m1-item a.m1-link:first-child {
-            border-top-left-radius: 6px;
-            border-top-right-radius: 6px;
-        }
+        // .m1-item a.m1-link:first-child {
+        //     border-top-left-radius: 0.4em;
+        //     border-top-right-radius: 0.4em;
+        // }
 
         .m2-link-left {
             display: flex;
@@ -245,13 +236,13 @@ body {
     .team-infos {
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 0.4em;
     }
 
     .match-infos {
         background-color: #2e364e;
         padding: 10px;
-        font-size: 12px;
+        font-size: 0.7em;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
         .match {
@@ -279,21 +270,13 @@ body {
         }
 
         .bet-btn-group {
-            height: 50px;
             display: flex;
+            justify-content: space-between;
 
-
-            .bet-btn:nth-of-type(1) {
-                width: 35%;
+            .bet-btn span {
+                word-wrap: break-word;
             }
 
-            .bet-btn:nth-of-type(2) {
-                width: 35%;
-            }
-
-            .bet-btn:nth-of-type(3) {
-                width: 35%;
-            }
         }
 
         .time,
@@ -312,12 +295,12 @@ body {
 // ---------------  Main Container Begin --------------- //
 .main-container {
     display: flex;
-    width: 73%;
+    width: 72%;
 
     // --------------- Left Container Begin --------------- //
 
     .left-container {
-        width: 94%;
+        width: 60%;
         margin: 0 15px;
         white-space: nowrap;
         overflow: hidden;
@@ -329,8 +312,8 @@ body {
             background-color: $sub-header-bg-color;
             color: $text-color-gray;
             padding: 10px;
-            border-top-left-radius: 6px;
-            border-top-right-radius: 6px;
+            border-top-left-radius: 0.4em;
+            border-top-right-radius: 0.4em;
         }
 
         .today-events-content {
@@ -344,13 +327,13 @@ body {
             padding: 4px;
 
             &::-webkit-scrollbar-thumb {
-                height: 5px;
+                height: 0.35em;
                 background: #485475;
                 border-radius: 0.4em;
             }
 
             &::-webkit-scrollbar {
-                height: 5px;
+                height: 0.35em;
                 cursor: pointer;
                 background: #b1b5b8;
                 border-radius: 0.4em;
@@ -366,22 +349,19 @@ body {
                 align-items: center;
                 justify-content: center;
                 margin-right: 0.7em;
-                padding: 0 36px;
+                padding: 0.7em 2.9em 0 2.9em;
                 cursor: pointer;
                 color: $text-color-gray;
                 background-color: #373f5d;
                 border-radius: 0.4em;
-                font-size: 13px;
+                font-size: 0.7em;
                 text-align: center;
-                height: 70px;
-                width: 100%;
                 white-space: nowrap;
                 overflow: hidden;
-                text-overflow: ellipsis;
 
 
                 .icon {
-                    font-size: 25px;
+                    font-size: 2.5em;
                     margin-bottom: 0.3em;
                 }
 
@@ -392,15 +372,14 @@ body {
                 }
 
                 .count {
-                    // display: none;
                     position: relative;
-                    left: 26px;
-                    bottom: 47px;
-                    font-size: 10px;
+                    left: 23px;
+                    bottom: 50px;
+                    font-size: 0.7em;
                     background-color: #47537a;
                     border-radius: 50%;
                     color: $text-color-white;
-                    padding: 2px 3px;
+                    padding: 3px;
                 }
             }
         }
@@ -410,18 +389,20 @@ body {
         // --------------- Upcoming Events Begin --------------- //
 
         .upcoming-events-header {
-            border-top-left-radius: 6px;
-            border-top-right-radius: 6px;
+            border-top-left-radius: 0.4em;
+            border-top-right-radius: 0.4em;
             margin-top: 15px;
             background-color: #343c56;
             padding: 10px;
             display: flex;
             justify-content: space-between;
+            color: $text-color-gray;
 
 
             .upcoming-tabs {
                 display: flex;
                 text-decoration: none;
+                align-items: baseline;
                 cursor: pointer;
                 font-size: 14px;
                 white-space: nowrap;
@@ -430,10 +411,7 @@ body {
 
                 .tab {
                     margin: 0 10px;
-                }
-
-                .tab .active .fa-solid {
-                    color: $text-color-white;
+                    position: relative;
                 }
 
                 .tab .fa-solid {
@@ -444,51 +422,102 @@ body {
                     display: none;
                 }
 
-                .active .tab-text {
-                    margin: 0 0.2em;
-                    display: block;
-                    font-size: 14px;
+
+                .tab a.active::before,
+                .tab a:hover::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 20%;
+                    height: 2px;
+                    background-color: #efc760;
+                    transition: width 0.3s ease;
                 }
+
+
 
                 .active,
                 .tab a:hover {
-                    padding: 0.5em;
                     display: flex;
+                    padding: 0.5em;
                     background-color: #2c354c;
                     color: $text-color-white;
                     border-radius: 0.3em;
-                    border-top: 2px solid #efc760;
 
                     .tab-text {
                         margin: 0 0.2em;
                         display: block;
                         font-size: 14px;
                         color: $text-color-white;
+
                     }
 
                     .fa-solid {
                         color: $text-color-white;
                     }
                 }
-
-
             }
 
         }
 
         .upcoming-events-content {
-            border-bottom-left-radius: 6px;
-            border-bottom-right-radius: 6px;
+            border-bottom-left-radius: 0.4em;
+            border-bottom-right-radius: 0.4em;
             background-color: #2e364e;
             padding: 10px;
-            font-size: 12px;
+            font-size: 1em;
+
+            .upcoming-fixture-header {
+                color: $text-color-gray;
+                font-size: 0.8em;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                .item:nth-of-type(1) {
+                    width: 6%;
+                }
+
+                .item:nth-of-type(2) {
+                    width: 24%;
+                }
+
+                // .item:nth-of-type(3) {
+                //     width: 40px;
+                // }
+
+                .item:nth-of-type(4) {
+                    width: 25%;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .item:nth-of-type(5) {
+                    width: 30%;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .item:nth-of-type(7) {
+                    width: 7%;
+                }
+
+                .item {
+                    margin: 0.2em 0;
+                }
+            }
 
             .upcoming-fixture-body {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                margin: 1em 0;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -497,31 +526,57 @@ body {
                     border-bottom: none;
                 }
 
-                .item:nth-of-type(2) {
-                    width: 25%;
+                .item:nth-of-type(1) {
+                    width: 6%;
                 }
 
+                .item:nth-of-type(2) {
+                    width: 24%;
+                    margin: 0.7em;
+                }
+
+                // .item:nth-of-type(3){
+                //     width: 40px;
+                // }
+
                 .item:nth-of-type(4) {
-                    width: 38%;
+                    width: 30%;
                     display: flex;
                     justify-content: center;
+                    margin: 0.7em 0 0.7em 0.7em;
                 }
 
                 .item:nth-of-type(5) {
-                    width: 33%;
+                    width: 25%;
                     display: flex;
                     justify-content: center;
+
+                    // margin: 0.7em;
+                    .bet-btn {
+                        width: 100%;
+                    }
+                }
+
+                .item:nth-of-type(6) {
+                    width: 2%;
+                    display: flex;
+                    justify-content: center;
+                    margin: 0.7em;
                 }
 
                 .item:nth-of-type(7) {
-                    width: 9%;
+                    width: 10%;
+
+                    .bet-btn {
+                        padding: 15px 10px;
+                    }
                 }
 
                 .item {
-                    margin: 0.5em;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    font-size: 0.8em;
 
                 }
 
@@ -545,70 +600,37 @@ body {
                 .live {
                     background-color: $text-color-green;
                     padding: 1px 15px;
-                    border-top-left-radius: 6px;
-                    border-bottom-right-radius: 6px;
-                    font-size: 12px;
+                    border-top-left-radius: 0.4em;
+                    border-bottom-right-radius: 0.4em;
+                    font-size: 1em;
                 }
 
                 .fa-chart-simple {
-                    font-size: 15px;
+                    font-size: 1em;
 
                 }
             }
         }
     }
 
-    .upcoming-fixture-header {
-        color: $text-color-gray;
-        font-size: 12px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        display: flex;
-        justify-content: space-between;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
 
-        .item:nth-of-type(2) {
-            width: 25%;
-        }
-
-        .item:nth-of-type(4) {
-            width: 38%;
-            display: flex;
-            justify-content: center;
-        }
-
-        .item:nth-of-type(5) {
-            width: 33%;
-            display: flex;
-            justify-content: center;
-        }
-
-        .item:nth-of-type(7) {
-            width: 9%;
-        }
-
-        .item {
-            margin: 0.2em 0;
-        }
-    }
 
     // --------------- Upcoming Events End --------------- //
 
     // ---------------  Casino Container Begin --------------- //
     .casino-games-header {
         color: $text-color-gray;
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
+        border-top-left-radius: 0.4em;
+        border-top-right-radius: 0.4em;
         background-color: #343c56;
         padding: 10px;
-        margin-top: 15px;
+        margin-top: 1em;
     }
 
     .casino-games-content {
         cursor: pointer;
-        padding: 15px;
-        font-size: 10px;
+        padding: 1em;
+        font-size: 0.5em;
         background-color: #2e3650;
         display: flex;
         justify-content: space-between;
@@ -617,13 +639,13 @@ body {
         overflow-y: hidden;
 
         &::-webkit-scrollbar-thumb {
-            height: 5px;
+            height: 0.7em;
             background: #485475;
             border-radius: 0.4em;
         }
 
         &::-webkit-scrollbar {
-            height: 5px;
+            height: 0.7em;
             cursor: pointer;
             background: #b1b5b8;
             border-radius: 0.4em;
@@ -635,75 +657,90 @@ body {
 
         .casino-card {
             position: relative;
-
+            width: 29%;
+            text-align: center;
+            margin: 0 5px;
 
             .card-img {
-                //  height: 11vh;
-                // 
+                display: flex;
+                flex-direction: column;
+                position: relative;
 
                 img {
                     width: 16vh;
-                    margin: 0 5px;
+                    // z-index: 0;
                     border-radius: 1em;
+                }
 
-                    &:hover {
-                        background-color: rgba(0, 0, 0, 0.4);
-                        transition: all 0.3s ease;
 
-                        .real,
-                        .free {
-                            display: block;
-                        }
-                    }
+            }
+
+            .card-img:hover {
+                background-color: rgba(0, 0, 0, 0.9);
+                // z-index: 999;
+                transition: all 0.5s ease-in-out;
+                border-radius: 1em;
+
+                .card-hover {
+                    display: block;
+
                 }
             }
 
             .game-info {
-                position: relative;
-                bottom: 80px;
-                left: 10px;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                width: 35%;
                 background-color: #378fcc;
                 border-radius: 0.3em;
-                padding: 1px 4px;
+                padding: 2px 4px;
                 text-transform: uppercase;
             }
 
-            .real,
-            .free {
-                display: none;
-                background-color: $bet-btn-base-bg-color;
-                color: $text-color-white;
-                border: none;
-                border-radius: 0.3em;
-                font-size: 12px;
-                padding: 0 45px;
-                cursor: pointer;
-            }
-
-            .real {
-
-                margin: 0.3em 0;
-                background-color: $bet-btn-bg-color-selected;
-            }
-
-            .free {
-                background-color: #346888;
-            }
-
-            .card-name {
-                font-size: 12px;
-                text-align: center;
-                color: $text-color-gray;
-            }
-
             .card-hover {
+                display: none;
                 position: absolute;
-                top: 40%;
+                top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 -ms-transform: translate(-50%, -50%);
 
+                .real,
+                .free {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    color: $text-color-white;
+                    border: none;
+                    border-radius: 0.3em;
+                    font-size: 1.5em;
+                    padding: 0 45px;
+                    cursor: pointer;
+                    width: 10em;
+                    height: 3vh;
+                }
+
+                .real {
+                    margin: 0.3em 0;
+                    background-color: $bet-btn-bg-color-selected;
+                }
+
+                .free {
+                    background-color: #346888;
+                }
             }
+
+
+
+            .card-name {
+                font-size: 1.5em;
+                color: $text-color-gray;
+                text-align: center;
+            }
+
+
         }
     }
 
@@ -718,7 +755,7 @@ body {
 .right-container {
     width: 37%;
     color: $text-color-gray;
-    font-size: 12px;
+    font-size: 0.7em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -727,8 +764,8 @@ body {
         height: 13vh;
 
         img {
-            border-top-left-radius: 6px;
-            border-top-right-radius: 6px;
+            border-top-left-radius: 0.4em;
+            border-top-right-radius: 0.4em;
             width: 100%;
             height: 13vh;
             object-fit: cover;
@@ -738,13 +775,21 @@ body {
             color: $text-color-white;
             background-color: rgba(0, 0, 0, 0.5);
             position: relative;
-            padding: 6px 5px;
-            bottom: 47px;
+            padding: 0.5em 0.6em;
+            bottom: 4.7em;
             display: flex;
             justify-content: space-between;
+            align-items: center;
 
             .first-line {
-                font-size: 16px;
+                font-size: 1.4em;
+                display: flex;
+                margin-bottom: 0.3em;
+
+                i {
+                    margin-right: 0.1em;
+                }
+
             }
         }
 
@@ -754,6 +799,7 @@ body {
             color: $text-color-white;
             border-radius: 0.3em;
             border: none;
+            padding: 1em 0.5em;
         }
     }
 
@@ -772,7 +818,19 @@ body {
         .fixture-list-view-header {
             display: flex;
             align-items: center;
-            justify-content: end;
+            justify-content: space-evenly;
+
+            .match {
+                flex-grow: 1;
+            }
+
+            .bet-type {
+                margin-right: 0.8em;
+            }
+
+            .date {
+                margin-right: 0.4em;
+            }
         }
 
         .other-btn {
@@ -791,6 +849,10 @@ body {
         .fixture-list-view-body {
             .bet-btn-group {
                 display: flex;
+
+                .bet-btn {
+                    width: 100%;
+                }
             }
         }
     }
@@ -803,23 +865,22 @@ body {
 
 // --------------- Right Sidebar Begin --------------- //
 .right-sidebar {
-    width: 15%;
+    width: 13%;
     margin-left: 0.8em;
 
     .closebtn .fa-xmark {
         display: none;
-        font-size: 20px;
+        font-size: 1.2em;
         color: $text-color-white;
     }
 
     // --------------- Bet Slip Begin --------------- //
     .bet-slip {
-        font-size: 14px;
         color: $text-color-black;
 
         .bet-slip-header {
-            border-top-left-radius: 6px;
-            border-top-right-radius: 6px;
+            border-top-left-radius: 0.4em;
+            border-top-right-radius: 0.4em;
             padding: 10px;
             background-color: #dbe6f2;
             display: flex;
@@ -836,7 +897,7 @@ body {
                 button {
                     cursor: pointer;
                     border: none;
-                    font-size: 16px;
+                    font-size: 0.7em;
                     background-color: #dbe6f2;
                 }
 
@@ -848,7 +909,7 @@ body {
 
         .bet-slip-content {
             background-color: #dbe6f2;
-            font-size: 12px;
+            font-size: 0.7em;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -860,20 +921,21 @@ body {
                 a {
                     color: $text-color-gray;
                     position: relative;
-
-                    &:hover {
-                        color: $text-color-black;
-                        border-bottom: 4px solid #ed6445;
-                        border-bottom-right-radius: 3px;
-                        border-bottom-left-radius: 3px;
-                    }
+                    padding-bottom: 0.5em;
                 }
 
-                .tab .active {
+                a.active::after,
+                a:hover::after {
                     color: $text-color-black;
-                    border-bottom: 4px solid #ed6445;
-                    border-bottom-left-radius: 3px;
-                    border-bottom-right-radius: 3px;
+                    border-bottom: 3px solid #ed6445;
+                    border-top-left-radius: 0.2em;
+                    border-top-right-radius: 0.2em;
+                    content: ' ';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+
                 }
 
             }
@@ -903,6 +965,14 @@ body {
 
                     .selection {
                         font-weight: bold;
+                    }
+
+                    .match-info,
+                    .match-action {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        text-wrap: wrap;
                     }
 
                     .coupon-close {
@@ -1022,6 +1092,7 @@ body {
 
         .fast-btns {
             display: flex;
+            flex: 1;
 
             .flex-item {
                 width: 100%;
@@ -1034,17 +1105,24 @@ body {
                 border: none;
                 border-radius: 0.3em;
             }
+
+            .flex-item.btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
         }
     }
 
     .numbers-cont {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, auto); 
+        grid-template-rows: repeat(4, auto);
         gap: 0.3em;
         margin-top: 0.3em;
     }
-     
+
     .item {
         display: grid;
         place-items: center;
@@ -1057,26 +1135,26 @@ body {
         font-size: 0.8em;
         font-weight: bold;
     }
-     
+
     .zero {
         grid-column: 1 / span 2;
     }
-     
-     
-    .backspace, 
+
+
+    .backspace,
     .enter {
         grid-column: 4;
     }
-     
+
     .backspace {
         grid-row: 1 / span 2;
         background-color: #346886;
     }
-     
+
     .enter {
-        grid-row: 3 / span 2; 
+        grid-row: 3 / span 2;
         background-color: #346886;
-    } 
+    }
 
     // --------------- Coupon Check End --------------- //
 }
@@ -1086,33 +1164,178 @@ body {
 // --------------- Mobile View --------------- //
 
 @media screen and (max-width: $small-screen) {
+
     header {
         justify-content: space-between;
+
         button {
             display: block;
         }
+        // button:checked + .fa-bars {
+            
+        // }
     }
+
     .content {
-        margin: 0.5em;
+        //margin: 0.5em;
+        justify-content: space-between;
     }
-    .left-sidebar, .right-sidebar  {
+
+    .left-sidebar {
         display: none;
+        width: 50%;
         margin: 0;
+
+        .tabs-container .live {
+            margin-left: 0;
+        }
     }
+
+    .left-sidebar.opened-left {
+        display: block;
+        position: absolute;
+        top:0;
+        background-color: #222b42;
+        left: 2;
+        height: 100%;
+        padding: 1em;
+
+        .closebtn {
+            text-align: right;
+            .fa-xmark {
+                display: block;
+            }
+
+        }
+        
+        
+    }
+    
+
+     
+        
+     
+    .overlay {
+        background-color: rgba(255, 255, 255, 0.6);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+         z-index: 0;
+    }
+
+    .right-sidebar {
+        display: none;
+        width: 50%;
+        margin-left: 0;
+        
+    }
+    .right-sidebar.opened-right{
+        
+        display: block;
+        background-color: #222b42;
+    position: absolute;
+    
+    left: 50%;
+    top:0;
+    height: 100%;
+    padding: 1em;
+    .closebtn{
+        text-align: right;
+        .fa-xmark{
+            display: block;
+        }
+    }
+    
+    }
+
+    .bet-btn {
+        font-size: 0.7em;
+
+        .rate {
+            font-size: 1.4em;
+        }
+
+        span:last-child {
+            font-size: 1.2em;
+        }
+    }
+
     .main-container {
         width: 100%;
         display: block;
-        .upcoming-fixture-body {
-           
-            .live, i, .item:last-child{
-                display: none;
+        // z-index: -1;
+
+        .left-container {
+            width: 100%;
+            margin: 0;
+
+            .today-events-header {
+                font-size: 0.8em;
+            }
+
+            .today-events-content .event-item {
+                .type {
+                    font-size: 0.8em;
+                }
+            }
+
+            .upcoming-events-header {
+                font-size: 0.8em;
+
+            }
+
+            .upcoming-events-content {
+                .upcoming-fixture-header {
+                    .item {
+                        font-size: 0.7em;
+                    }
+
+                    .item:nth-of-type(5),
+                    .item:nth-of-type(7) {
+                        display: none;
+                    }
+                }
+
+                .upcoming-fixture-body {
+                    .item {
+
+                        .time,
+                        .date,
+                        .team-home,
+                        .team-away {
+                            font-size: 0.7em;
+                        }
+                    }
+
+                    .live,
+                    i,
+                    .item:nth-of-type(5),
+                    .item:last-child {
+                        display: none;
+                    }
+                }
+            }
+
+            .casino-games-header {
+                font-size: 0.8em;
+            }
+
+            .casino-card {
+                width: 100%;
             }
         }
-       
+
+        .right-container {
+            width: 100%;
+            margin-top: 1em;
+        }
+
     }
 }
+
 // --------------- Tablet View --------------- //
 @media screen and (min-width: $medium-screen) and (max-width: $large-screen) {}
+
 // --------------- Desktop View --------------- //
 @media screen and (min-width: $large-screen) {}
 
