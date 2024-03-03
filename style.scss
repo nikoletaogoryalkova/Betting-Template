@@ -269,7 +269,7 @@ body {
             justify-content: space-between;
 
             .score {
-                color: $text-color-green;
+                color: #3ebe56;
                 font-weight: bold;
             }
         }
@@ -601,7 +601,7 @@ body {
                 }
 
                 .live {
-                    background-color: $text-color-green;
+                    background-color: #3ebe56;
                     padding: 1px 15px;
                     border-top-left-radius: 0.4em;
                     border-bottom-right-radius: 0.4em;
@@ -1175,7 +1175,7 @@ body {
 
 // --------------- Mobile View --------------- //
 
-// @media only screen and (max-width: 480px)
+
 @media screen and (max-width: 480px) {
 
     .overlay {
@@ -1202,31 +1202,32 @@ body {
     // --------------- Mobile Header End --------------- //
 
     // --------------- Mobile Bet Button Begin --------------- //
-  .content{
+    .content {
 
-      .bet-btn {
-        font-size: 0.6em;
-        text-overflow: ellipsis;
+        .bet-btn {
+            font-size: 0.6em;
+            text-overflow: ellipsis;
 
-        .rate {
-            font-size: 1.4em;
-        }
+            .rate {
+                font-size: 1.4em;
+            }
 
-        span:last-child {
-            font-size: 1.2em;
+            span:last-child {
+                font-size: 1.2em;
                 opacity: 1;
             }
 
-        &:hover {
-            background-color: $bet-btn-base-bg-color;
-        }
-       &:active {
-        background-color: $bet-btn-bg-color-active;
-       }
-    
-    }
+            &:hover {
+                background-color: $bet-btn-base-bg-color;
+            }
 
-  } 
+            &:active {
+                background-color: $bet-btn-bg-color-active;
+            }
+
+        }
+
+    }
 
     // --------------- Mobile Bet Button End --------------- //
 
@@ -1256,9 +1257,10 @@ body {
         width: 50%;
         margin: 0;
 
-        .tabs-container  {
+        .tabs-container {
             .live {
                 margin-left: 0;
+
                 &:hover {
                     background-color: #252c3c;
                     color: $text-color-gray;
@@ -1307,10 +1309,13 @@ body {
 
             .today-events-content .event-item {
                 &:hover {
-                    .icon, .type {
+
+                    .icon,
+                    .type {
                         color: $text-color-gray;
                     }
                 }
+
                 .type {
                     font-size: 0.8em;
                 }
@@ -1489,10 +1494,8 @@ body {
 
             .league-header {
                 .img-title {
-                    // padding: 0.9em 0.6em;
-                   
-                        bottom: 4.3em;
-                     
+                    bottom: 4.3em;
+
                     .btn-season {
                         font-size: 1em;
                         padding: 0.9em 0.5em;
@@ -1594,11 +1597,11 @@ body {
     // --------------- Mobile Right Side Bar End --------------- //
 
 }
-    // --------------- Mobile View End --------------- //
+
+// --------------- Mobile View End --------------- //
 
 
-// // --------------- Tablet View Begin --------------- //
-// @media only screen and (max-width: 999px)
+// --------------- Tablet View Begin --------------- //
 @media screen and (min-width: 481px) and (max-width: 999px) {
     .overlay {
         background-color: rgba(255, 255, 255, 0.3);
@@ -1654,14 +1657,16 @@ body {
     }
 
 
-
+    // --------------- Tablet Main Container Begin --------------- //
     .main-container {
         flex-direction: column;
         width: 100%;
 
         .left-container {
             width: 97%;
-            .upcoming-events-header{
+
+            .upcoming-events-header {
+
                 .upcoming-tabs .tab:nth-child(3),
                 .upcoming-tabs .tab:nth-child(4),
                 .upcoming-tabs .tab:nth-child(5),
@@ -1669,6 +1674,7 @@ body {
                     display: none;
                 }
             }
+
             .upcoming-events-content {
                 .upcoming-fixture-header {
                     .item:nth-of-type(2) {
@@ -1726,6 +1732,7 @@ body {
                     }
                 }
             }
+
             .casino-games-content .casino-card {
                 width: 35%;
             }
@@ -1734,13 +1741,15 @@ body {
         .right-container {
             width: 97%;
             margin: 1em;
+
             .league-header .img-title {
                 bottom: 4.9em;
-             }
+            }
         }
     }
 
-    // --------------- Right Sidebar Opened --------------- //
+    // --------------- Tablet Main Container End --------------- //
+    // --------------- Tablet Right Sidebar Begin --------------- //
     .right-sidebar.opened-right {
         display: block;
         background-color: #222b42;
@@ -1768,20 +1777,21 @@ body {
     }
 }
 
-
+// --------------- Tablet Right Sidebar End --------------- //
 // // --------------- Tablet View End --------------- //
 
 // // --------------- Large View Begin--------------- //
-// @media only screen and (max-width: 1199px) 
+
 @media screen and (min-width: 1000px) and (max-width: 1199px) {
     .main-container {
-        
-            flex-direction: column;
-            align-content: center;
-            width: 70%;
-    
+
+        flex-direction: column;
+        align-content: center;
+        width: 70%;
+
         .left-container {
             width: 98%;
+
             .upcoming-events-content {
                 .upcoming-fixture-header {
                     .item:nth-of-type(2) {
@@ -1841,14 +1851,17 @@ body {
             }
 
         }
+
         .right-container {
             width: 98%;
             margin: 1.5em 0 0 1.3em;
+
             .league-header .img-title {
                 bottom: 4.9em;
-             }
+            }
         }
     }
+
     .right-sidebar {
         width: 15%;
     }
@@ -1924,4 +1937,5 @@ body {
     }
 }
 
-//--------------- Extra Large View End--------------- //
+//--------------- Extra Large View End---------------//
+//--------------- Content End---------------//

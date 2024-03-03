@@ -1006,7 +1006,8 @@ body {
     font-size: 0.8em;
     padding: 10px;
   }
-  .main-container .left-container .today-events-content .event-item:hover .icon, .main-container .left-container .today-events-content .event-item:hover .type {
+  .main-container .left-container .today-events-content .event-item:hover .icon,
+  .main-container .left-container .today-events-content .event-item:hover .type {
     color: #97999d;
   }
   .main-container .left-container .today-events-content .event-item .type {
