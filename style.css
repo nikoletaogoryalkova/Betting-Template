@@ -51,7 +51,7 @@ body {
   justify-content: center;
 }
 .content .bet-btn span:last-child {
-  font-size: 10px;
+  font-size: 0.8em;
   opacity: 0.5;
 }
 .content .bet-btn.active {
@@ -69,7 +69,7 @@ body {
 }
 .left-sidebar .closebtn .fa-solid {
   color: #fff;
-  font-size: 20px;
+  font-size: 1.2em;
   display: none;
 }
 .left-sidebar .tabs-container {
@@ -123,7 +123,7 @@ body {
 }
 .left-sidebar .range-container .range-numbers {
   margin-top: 1em;
-  font-size: 11px;
+  font-size: 0.6em;
   display: flex;
 }
 .left-sidebar .range-container .range-numbers .range-number {
@@ -151,7 +151,7 @@ body {
 }
 .left-sidebar .live-menu-container .m1-item:nth-child(2):hover .m2-link {
   display: block;
-  font-size: 14px;
+  font-size: 0.8em;
 }
 .left-sidebar .live-menu-container .m1-item:nth-child(3):hover .m2-link {
   display: block;
@@ -319,7 +319,7 @@ body {
   text-decoration: none;
   align-items: baseline;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.8em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -358,7 +358,7 @@ body {
 .main-container .left-container .upcoming-events-header .upcoming-tabs .tab a:hover .tab-text {
   margin: 0 0.2em;
   display: block;
-  font-size: 14px;
+  font-size: 0.9em;
   color: #fff;
 }
 .main-container .left-container .upcoming-events-header .upcoming-tabs .active .fa-solid,
@@ -754,7 +754,7 @@ body {
 }
 .right-sidebar .bet-slip .bet-slip-content .coupon-container .coupon .match-check .fa-circle-check {
   color: #b0b3b0;
-  font-size: 18px;
+  font-size: 1.3em;
 }
 .right-sidebar .bet-slip .bet-slip-content .coupon-container .coupon .match-info {
   flex-grow: 6;
@@ -782,7 +782,7 @@ body {
   background-color: #fff;
 }
 .right-sidebar .bet-slip .bet-slip-content .coupon-container .coupon .coupon-close button .fa-xmark {
-  font-size: 16px;
+  font-size: 1em;
 }
 .right-sidebar .bet-slip .bet-slip-content .coupon-container .coupon .match-rate {
   color: #ed6445;
@@ -864,7 +864,7 @@ body {
 }
 .right-sidebar .numpad .numpad-header {
   color: #97999d;
-  font-size: 14px;
+  font-size: 0.8em;
   padding: 8px;
 }
 .right-sidebar .numpad-content {
@@ -875,7 +875,7 @@ body {
 }
 .right-sidebar .numpad-content .fast-btns .flex-item {
   width: 100%;
-  font-size: 10px;
+  font-size: 0.6em;
   padding: 5px 2px;
   margin: 0 2px;
   cursor: pointer;
@@ -1026,10 +1026,24 @@ body {
   .main-container .left-container .upcoming-events-header .upcoming-tabs .tab a .fa-solid {
     font-size: 0.8em;
   }
-  .main-container .left-container .upcoming-events-header .upcoming-tabs .active .tab-text,
-  .main-container .left-container .upcoming-events-header .upcoming-tabs .tab a .tab-text {
-    font-size: 0.8em;
-    margin-left: 0.5em;
+  .main-container .left-container .upcoming-events-header .tab a:hover::before {
+    position: static;
+    display: none;
+  }
+  .main-container .left-container .upcoming-events-header .tab .active:hover {
+    padding: 0;
+  }
+  .main-container .left-container .upcoming-events-header .upcoming-tabs .tab a:hover {
+    background-color: #343c56;
+    color: #97999d;
+    padding: 0;
+    border-radius: 0;
+  }
+  .main-container .left-container .upcoming-events-header .upcoming-tabs .tab a:hover .tab-text {
+    display: none;
+  }
+  .main-container .left-container .upcoming-events-header .upcoming-tabs .tab a:hover .fa-solid {
+    color: #97999d;
   }
   .main-container .left-container .upcoming-events-header .upcoming-tabs .tab:nth-child(3),
   .main-container .left-container .upcoming-events-header .upcoming-tabs .tab:nth-child(4),
