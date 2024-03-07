@@ -172,11 +172,31 @@ body {
         border-top-left-radius: 0.4em;
         border-top-right-radius: 0.4em;
 
-        .m1-list .active a {
+        .m1-list .active,
+        .m1-item a {
             color: $text-color-white;
 
+        }
+
+        .m1-list .active,
+        .m1-list a:hover {
             .fa-chevron-right:before {
                 content: "\f078";
+            }
+        }
+        .active .m1-link:hover, .m2-item .m2-link:hover {
+            .m1-link-right i::before {
+                content: "\f054";
+            }
+        }
+
+
+        .m2-item .m2-link {
+            display: flex;
+            justify-content: space-between;
+
+            .text {
+                margin-left: 0.5em;
             }
         }
 
@@ -201,16 +221,6 @@ body {
             }
         }
 
-        .m2-link:nth-child(2):checked {
-            .m2-item:nth-child(2) .match-infos {
-
-                display: block;
-            }
-        }
-
-
-
-
         ul a {
             cursor: pointer;
             display: flex;
@@ -230,16 +240,6 @@ body {
                 color: $text-color-white;
             }
         }
-
-        .m2-link-left {
-            display: flex;
-            align-items: center;
-
-            .text {
-                margin-left: 0.5em;
-            }
-        }
-
     }
 
     .team-infos {
@@ -918,15 +918,13 @@ body {
                 display: flex;
                 justify-content: space-around;
 
-                a {
-                    color: $text-color-gray;
-                    position: relative;
-                    padding-bottom: 0.5em;
+                .active,
+                a:hover {
+                    color: $text-color-black;
                 }
 
                 a.active::after,
                 a:hover::after {
-                    color: $text-color-black;
                     border-bottom: 3px solid #ed6445;
                     border-top-left-radius: 0.2em;
                     border-top-right-radius: 0.2em;
@@ -935,6 +933,12 @@ body {
                     bottom: 0;
                     left: 0;
                     width: 100%;
+                }
+
+                a {
+                    color: $text-color-gray;
+                    position: relative;
+                    padding-bottom: 0.5em;
                 }
             }
 
@@ -1339,11 +1343,12 @@ body {
                         }
                     }
                 }
-                
+
                 .tab a:hover::before {
                     position: static;
                     display: none;
                 }
+
                 .tab .active:hover {
                     padding: 0;
                 }
@@ -1578,6 +1583,17 @@ body {
         .bet-slip {
 
             .bet-slip-content {
+                .bet-slip-tabs {
+                    .active:hover {
+                        color: $text-color-black;
+                    }
+
+                    a:hover::after,
+                    a:hover {
+                        color: $text-color-gray;
+                        border-bottom: none;
+                    }
+                }
 
                 .coupon-container .coupon {
                     .match-info {
@@ -1599,6 +1615,10 @@ body {
                     }
                 }
             }
+
+
+
+
         }
 
         .numpad-content {

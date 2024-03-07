@@ -136,11 +136,23 @@ body {
   border-top-left-radius: 0.4em;
   border-top-right-radius: 0.4em;
 }
-.left-sidebar .live-menu-container .m1-list .active a {
+.left-sidebar .live-menu-container .m1-list .active,
+.left-sidebar .live-menu-container .m1-item a {
   color: #fff;
 }
-.left-sidebar .live-menu-container .m1-list .active a .fa-chevron-right:before {
+.left-sidebar .live-menu-container .m1-list .active .fa-chevron-right:before,
+.left-sidebar .live-menu-container .m1-list a:hover .fa-chevron-right:before {
   content: "\f078";
+}
+.left-sidebar .live-menu-container .active .m1-link:hover .m1-link-right i::before, .left-sidebar .live-menu-container .m2-item .m2-link:hover .m1-link-right i::before {
+  content: "\f054";
+}
+.left-sidebar .live-menu-container .m2-item .m2-link {
+  display: flex;
+  justify-content: space-between;
+}
+.left-sidebar .live-menu-container .m2-item .m2-link .text {
+  margin-left: 0.5em;
 }
 .left-sidebar .live-menu-container .m2-item:nth-child(2) .match-infos,
 .left-sidebar .live-menu-container .m1-item:nth-child(2) .m2-link,
@@ -154,9 +166,6 @@ body {
   font-size: 0.8em;
 }
 .left-sidebar .live-menu-container .m1-item:nth-child(3):hover .m2-link {
-  display: block;
-}
-.left-sidebar .live-menu-container .m2-link:nth-child(2):checked .m2-item:nth-child(2) .match-infos {
   display: block;
 }
 .left-sidebar .live-menu-container ul a {
@@ -175,13 +184,6 @@ body {
 }
 .left-sidebar .live-menu-container ul a:hover {
   color: #fff;
-}
-.left-sidebar .live-menu-container .m2-link-left {
-  display: flex;
-  align-items: center;
-}
-.left-sidebar .live-menu-container .m2-link-left .text {
-  margin-left: 0.5em;
 }
 .left-sidebar .team-infos {
   display: flex;
@@ -724,14 +726,12 @@ body {
   display: flex;
   justify-content: space-around;
 }
-.right-sidebar .bet-slip .bet-slip-content .bet-slip-tabs a {
-  color: #97999d;
-  position: relative;
-  padding-bottom: 0.5em;
+.right-sidebar .bet-slip .bet-slip-content .bet-slip-tabs .active,
+.right-sidebar .bet-slip .bet-slip-content .bet-slip-tabs a:hover {
+  color: #000;
 }
 .right-sidebar .bet-slip .bet-slip-content .bet-slip-tabs a.active::after,
 .right-sidebar .bet-slip .bet-slip-content .bet-slip-tabs a:hover::after {
-  color: #000;
   border-bottom: 3px solid #ed6445;
   border-top-left-radius: 0.2em;
   border-top-right-radius: 0.2em;
@@ -740,6 +740,11 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+.right-sidebar .bet-slip .bet-slip-content .bet-slip-tabs a {
+  color: #97999d;
+  position: relative;
+  padding-bottom: 0.5em;
 }
 .right-sidebar .bet-slip .bet-slip-content .coupon-container .coupon {
   display: flex;
@@ -1180,6 +1185,14 @@ body {
     display: none;
     width: 50%;
     margin-left: 0;
+  }
+  .right-sidebar .bet-slip .bet-slip-content .bet-slip-tabs .active:hover {
+    color: #000;
+  }
+  .right-sidebar .bet-slip .bet-slip-content .bet-slip-tabs a:hover::after,
+  .right-sidebar .bet-slip .bet-slip-content .bet-slip-tabs a:hover {
+    color: #97999d;
+    border-bottom: none;
   }
   .right-sidebar .bet-slip .bet-slip-content .coupon-container .coupon .match-info {
     margin-left: 4px;
